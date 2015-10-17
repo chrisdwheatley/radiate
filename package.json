@@ -1,0 +1,11 @@
+{
+  "name": "dash",
+  "version": "0.1.0",
+  "description": "react powered dashboard",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chris Wheatley <chriswheatley87@gmail.com>",
+  "license": "MIT"
+}
