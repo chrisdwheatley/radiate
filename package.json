@@ -7,5 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Chris Wheatley <chriswheatley87@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "react": "^0.14.0",
+    "react-transform-boilerplate": "^1.0.0",
+    "redux": "^3.0.2",
+    "webpack": "^1.12.2"
+  }
 }
