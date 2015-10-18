@@ -4,7 +4,9 @@
   "description": "react powered dashboard",
   "main": "index.js",
   "scripts": {
-    "test": "xo"
+    "lint": "xo",
+    "start": "webpack-dev-server",
+    "test": "npm run lint"
   },
   "author": "Chris Wheatley <chriswheatley87@gmail.com>",
   "license": "MIT",
