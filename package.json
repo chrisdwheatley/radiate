@@ -1,7 +1,7 @@
 {
-  "name": "dash",
+  "name": "dashboard",
   "version": "0.1.0",
-  "description": "react powered dashboard",
+  "description": "react powered responsive dashboard",
   "main": "index.js",
   "scripts": {
     "lint": "xo",
