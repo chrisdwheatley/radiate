@@ -1,7 +1,7 @@
 var path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, 'build'),
     publicPath: '/static/',
@@ -10,7 +10,7 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.js?$/,
-      loader: 'babel?optional[]=runtime&stage=0',
+      loader: 'babel?stage=0',
       exclude: /node_modules/
     }]
   }
