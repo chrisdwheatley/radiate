@@ -11,11 +11,7 @@ module.exports = {
     loaders: [{
       test: /\.js?$/,
       loader: 'babel?optional[]=runtime&stage=0',
-      exclude: /node_modules/,
-      includes: [
-        path.join(__dirname, 'src'),
-        path.join(__dirname, 'dashboard')
-      ]
+      exclude: /node_modules/
     }]
   }
 };
