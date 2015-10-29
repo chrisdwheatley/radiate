@@ -1,4 +1,4 @@
-var path = require('path');
+var path = require('path')
 
 module.exports = {
   entry: './src/main.js',
@@ -14,4 +14,4 @@ module.exports = {
       exclude: /node_modules/
     }]
   }
-};
+}
