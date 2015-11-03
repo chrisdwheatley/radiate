@@ -1,8 +1,3 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Dashboard from '../dashboard'
-
-ReactDOM.render(
-  <Dashboard />,
-  document.querySelector('dashboard')
-)
+export {Graph} from './graph'
+export {Grid} from './grid'
+export {Item} from './item'
