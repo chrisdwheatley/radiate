@@ -1,12 +1,27 @@
 import React, {Component} from 'react'
-import {Grid} from '../src/dashboard'
+import {Graph, Grid, Item} from '../src'
 
 export default class extends Component {
-  render() {
+  render () {
     return (
-      <Grid>
-
-      </Grid>
-    );
+      <section>
+        <Grid>
+          <Item size='1/2'>
+            <Graph />
+          </Item>
+          <Item>
+            <Graph />
+          </Item>
+        </Grid>
+        <Grid>
+          <Item size='1/3'>
+            <Graph />
+          </Item>
+          <Item>
+            <Graph />
+          </Item>
+        </Grid>
+      </section>
+    )
   }
-};
+}
