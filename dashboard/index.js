@@ -1,44 +1,36 @@
 import React, {Component} from 'react'
-import {Dashboard, Graph, Row, Item, Value} from '../src'
+import {Dashboard, Graph, Row, Cell, Value} from '../src'
 import {optimizedResize, findBreakpoints} from 'react-flexr'
 
 export default class extends Component {
   render () {
     return (
       <Dashboard>
-        <Row height='m'>
-          <Item width='s'>
-            <Graph data=''/>
-          </Item>
-          <Item width='l' palm='hidden'>
-            <Value freq='1m' name='Branch' />
-          </Item>
+        <Row>
+          <Cell width='m'>
+            <Value title='Placeholder:' event='rng' freq='2s' />
+          </Cell>
+          <Cell width='l'>
+            <Value title='GitHub is:' event='gh-status-check' freq='15m' />
+          </Cell>
         </Row>
-        <Row height='s'>
-          <Item width='s'>
-            <Graph />
-          </Item>
-          <Item width='s'>
-            <Graph />
-          </Item>
-          <Item width='s'>
-            <Graph />
-          </Item>
-        </Row>
-        <Row height='l'>
-          <Item width='m'>
-            <Graph />
-          </Item>
-          <Item width='m'>
-            <Graph />
-          </Item>
+        <Row>
+          <Cell width='m'>
+            <Value title='Placeholder:' event='rng' freq='2s' />
+          </Cell>
+          <Cell width='s'>
+            <Value title='Placeholder:' event='rng' freq='2s' />
+          </Cell>
+          <Cell width='s'>
+            <Value title='Placeholder:' event='rng' freq='2s' />
+          </Cell>
         </Row>
       </Dashboard>
     )
   }
 
-  constructor() {
-    super()
+  constructor (props) {
+    super(props)
     optimizedResize.init(() => {
       if (findBreakpoints()) {
         this.forceUpdate()
