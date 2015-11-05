@@ -1,3 +1,5 @@
+export {Cell} from './cell'
+export {Dashboard} from './dashboard'
 export {Graph} from './graph'
-export {Grid} from './grid'
-export {Item} from './item'
+export {Row} from './row'
+export {Value} from './value'
