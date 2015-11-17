@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import getCurrentBreakpoints, {Cell as FlexrCell} from 'react-flexr'
+import {Cell as FlexrCell} from 'react-flexr'
 
 export class Cell extends Component {
   render () {
@@ -21,16 +21,19 @@ export class Cell extends Component {
       }
     }
 
+    const children = React.Children.map(this.props.children, (child) => {
+      return React.cloneElement(child, {...this.props})
+    })
+
     return (
       <FlexrCell
-        {...this.props}
         palm={widthsMap[this.props.width].palm}
         lap={widthsMap[this.props.width].lap}
         desk={widthsMap[this.props.width].desk}
         style={{padding: '0', paddingBottom: '22px', transition: 'all .5s ease-in-out'}}>
           <div
             style={{background: 'lightgrey', margin: '0 11px', height: '100%'}}>
-              {this.props.children}
+            {children}
           </div>
       </FlexrCell>
     )
