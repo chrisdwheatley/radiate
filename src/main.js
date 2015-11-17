@@ -1,10 +1,17 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import {render} from 'react-dom'
+import {createStore} from 'redux'
+import {Provider} from 'react-redux'
 import Dashboard from '../dashboard'
-import 'react-flexr/styles.css'
 import './reset.css'
+import 'react-flexr/styles.css'
+import poll from './reducers'
 
-ReactDOM.render(
-  <Dashboard />,
+const store = createStore(poll)
+
+render(
+  <Provider store={store}>
+    <Dashboard />
+  </Provider>,
   document.querySelector('dashboard')
 )
