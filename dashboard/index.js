@@ -8,21 +8,21 @@ export default class extends Component {
       <Dashboard>
         <Row>
           <Cell width='m'>
-            <Value title='Placeholder:' event='rng' freq='2s' />
+            <Value id='0' title='Placeholder:' file='example.json' prop='item' freq='10' />
           </Cell>
-          <Cell width='l'>
-            <Value title='GitHub is:' event='gh-status-check' freq='15m' />
+          <Cell width='m'>
+            <Value id='1' title='GitHub is:' freq='15m' />
           </Cell>
         </Row>
         <Row>
           <Cell width='m'>
-            <Value title='Placeholder:' event='rng' freq='2s' />
+            <Value id='2' title='Placeholder:' freq='2s' />
           </Cell>
           <Cell width='s'>
-            <Value title='Placeholder:' event='rng' freq='2s' />
+            <Value id='3' title='Placeholder:' freq='2s' />
           </Cell>
           <Cell width='s'>
-            <Value title='Placeholder:' event='rng' freq='2s' />
+            <Value id='4' title='Placeholder:' freq='2s' />
           </Cell>
         </Row>
       </Dashboard>
