@@ -1,3 +1,4 @@
+var CopyWebpackPlugin = require('copy-webpack-plugin')
 var path = require('path')
 
 module.exports = {
@@ -17,5 +18,10 @@ module.exports = {
       test: /\.css$/,
       loader: 'style-loader!css-loader'
     }]
-  }
+  },
+  plugins: [
+    new CopyWebpackPlugin([{
+      from: 'dashboard/data'
+    }])
+  ]
 }
