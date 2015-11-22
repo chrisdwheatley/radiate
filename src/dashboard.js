@@ -2,10 +2,13 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import poll from './actions'
 
-class Dashboard extends Component {
-  constructor(props) {
-    super(props)
+function mapStateToProps (state) {
+  return {
+    value: state
   }
+}
+
+class Dashboard extends Component {
 
   render () {
     const {dispatch} = this.props
@@ -21,12 +24,6 @@ class Dashboard extends Component {
         {children}
       </div>
     )
-  }
-}
-
-function mapStateToProps (state) {
-  return {
-    value: state
   }
 }
 
