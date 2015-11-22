@@ -4,7 +4,7 @@ export class Image extends Component {
   render () {
     const {src} = this.props
     return (
-      <img src={src.includes('http://') ? src: `http://${src}`} width='100%' />
+      <img src={src} style={{minWidth: '50%', maxWidth: '100%'}} />
     )
   }
 }
