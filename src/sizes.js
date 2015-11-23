@@ -1,17 +1,17 @@
 export const SIZES = {
   s: {
-    palm: '3/6',
-    lap: '2/6',
-    desk: '1/6'
+    palm: '1/3',
+    lap: '1/3',
+    desk: '1/3'
   },
   m: {
-    palm: '6/6',
-    lap: '4/6',
-    desk: '2/6'
+    palm: '2/3',
+    lap: '2/3',
+    desk: '2/3'
   },
   l: {
-    palm: '6/6',
-    lap: '6/6',
-    desk: '4/6'
+    palm: '3/3',
+    lap: '3/3',
+    desk: '3/3'
   }
 }
