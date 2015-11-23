@@ -4,6 +4,7 @@ import {SIZES} from './sizes'
 import {LastUpdated} from './last-updated'
 
 export class Cell extends Component {
+
   render () {
     const {children, width} = this.props
 
