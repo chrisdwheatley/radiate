@@ -19,7 +19,7 @@ export class Cell extends Component {
         desk={SIZES[width].desk}
         style={{padding: '0', marginBottom: 22, transition: 'all .5s ease-in-out'}}>
           <div
-            style={{background: '#A490CC', height: '100%', margin: '0 11px', boxShadow: '0 9px 20px rgba(0, 0, 0, 0.3)'}}>
+            style={{background: '#83A1E4', height: '100%', margin: '0 11px', boxShadow: '0 9px 20px rgba(0, 0, 0, 0.3)'}}>
             {kids}
             {this.props['last-updated'] ? <LastUpdated /> : null}
           </div>
