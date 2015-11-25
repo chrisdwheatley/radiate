@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import fetch from './fetch'
+import {Compare} from './compare'
 
 export class Value extends Component {
 
@@ -21,12 +22,13 @@ export class Value extends Component {
   }
 
   render () {
-    const {freq, id, title, value} = this.props
+    const {compare, freq, id, title, value} = this.props
 
     return (
       <div style={{padding: '1em', margin: 0, textAlign: 'center'}}>
         <h3>{title}</h3>
         <h2>{value[id] ? value[id] : ''}</h2>
+        {compare ? <Compare value={value[id]} /> : ''}
       </div>
     )
   }
