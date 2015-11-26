@@ -22,12 +22,15 @@ export class Value extends Component {
   }
 
   render () {
-    const {compare, freq, id, title, value} = this.props
+    const {compare, freq, id, prefix, title, value} = this.props
 
     return (
       <div style={{padding: '1em', margin: 0, textAlign: 'center'}}>
-        <h3>{title}</h3>
-        <h2>{value[id] ? value[id] : ''}</h2>
+        <h4>{title}</h4>
+        <h2>
+          {prefix ? prefix : ''}
+          {value[id] ? value[id] : ''}
+        </h2>
         {compare ? <Compare value={value[id]} /> : ''}
       </div>
     )
