@@ -1,13 +1,44 @@
 import React, {Component} from 'react'
+import fetch from './fetch'
+import {parse} from 'markdown'
 
 export class Text extends Component {
 
+  constructor(props) {
+    const {body} = this.props
+    super(props)
+    this.state = {
+      text: {
+        __html: body
+      }
+    }
+  }
+
+  componentDidMount () {
+    const {file} = this.props
+
+    if (file) {
+      fetch(file, null).then(res => {
+        this.setState({
+          text: {
+            __html: parse(res)
+          }
+        })
+      })
+    }
+
+  }
+
   render () {
-    const {body, title} = this.props
+    const {title} = this.props
+    const {text} = this.state
+
     return (
       <div style={{padding: '1em', margin: 0}}>
-        <h3 style={{textAlign: 'center'}}>{title}</h3>
-        <p>{body}</p>
+        <div style={{textAlign: 'center'}}>
+          {title}
+        </div>
+        <p dangerouslySetInnerHTML={this.state.text}></p>
       </div>
     )
   }
