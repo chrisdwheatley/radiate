@@ -5,8 +5,10 @@ import {parse} from 'markdown'
 export class Text extends Component {
 
   constructor(props) {
-    const {body} = this.props
     super(props)
+
+    const {body} = this.props
+
     this.state = {
       text: {
         __html: body
