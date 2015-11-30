@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import fetch from './fetch'
 import {Compare} from './compare'
+import fetch from './fetch'
 
 export class Value extends Component {
 
@@ -11,12 +11,14 @@ export class Value extends Component {
       fetch(file, api).then(res => {
         onPoll(id, res[prop])
       })
-      // switch to setTimeout at some point
-      setInterval(() => {
-        fetch(file, api).then(res => {
-          onPoll(id, res[prop])
-        })
-      }, freq * 1000)
+      if (freq) {
+        // switch to setTimeout at some point
+        setInterval(() => {
+          fetch(file, api).then(res => {
+            onPoll(id, res[prop])
+          })
+        }, freq * 1000)
+      }
     }
 
   }
@@ -26,11 +28,11 @@ export class Value extends Component {
 
     return (
       <div style={{padding: '1em', margin: 0, textAlign: 'center'}}>
-        <h4>{title}</h4>
-        <h2>
+        <div>{title}</div>
+        <div>
           {prefix ? prefix : ''}
           {value[id] ? value[id] : ''}
-        </h2>
+        </div>
         {compare ? <Compare value={value[id]} /> : ''}
       </div>
     )
