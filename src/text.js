@@ -1,6 +1,6 @@
+import {parse} from 'markdown'
 import React, {Component} from 'react'
 import fetch from './fetch'
-import {parse} from 'markdown'
 
 export class Text extends Component {
 
@@ -40,7 +40,7 @@ export class Text extends Component {
         <div style={{textAlign: 'center'}}>
           {title}
         </div>
-        <p dangerouslySetInnerHTML={this.state.text}></p>
+        <p dangerouslySetInnerHTML={text}></p>
       </div>
     )
   }
