@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
 
 export class LastUpdated extends Component {
-  
+
   render () {
     return (
-      <span>Last Updated: {new Date().toString()}</span>
+      <span style={{padding: '1em'}}>Last Updated: {new Date().toString()}</span>
     )
   }
 }
