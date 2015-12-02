@@ -21,7 +21,7 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin([{
-      from: 'dashboard/data'
+      from: 'dashboard/assets'
     }])
   ]
 }
