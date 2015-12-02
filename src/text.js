@@ -32,15 +32,16 @@ export class Text extends Component {
   }
 
   render () {
-    const {title} = this.props
+    const {children, file, title} = this.props
     const {text} = this.state
+    const inlineText = children.props.children
 
     return (
       <div style={{padding: '1em', margin: 0}}>
         <div style={{textAlign: 'center'}}>
           {title}
         </div>
-        <p dangerouslySetInnerHTML={text}></p>
+        {file ? <div dangerouslySetInnerHTML={text}></div> : <div>{inlineText}</div>}
       </div>
     )
   }
