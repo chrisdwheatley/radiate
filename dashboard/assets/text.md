@@ -1,3 +1,3 @@
-* static content
-* served from a file
-* in markdown format
+* Written __inline__
+* Or from a _file_
+* Supports images
