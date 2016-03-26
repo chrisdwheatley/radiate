@@ -1,4 +1,5 @@
 import {parse} from 'markdown'
+import * as colors from 'material-ui/lib/styles/colors'
 import React, {Component} from 'react'
 import fetch from './fetch'
 
@@ -37,11 +38,11 @@ export class Text extends Component {
     const inlineText = children.props.children
 
     return (
-      <div style={{padding: '1em', margin: 0}}>
-        <div style={{textAlign: 'center'}}>
-          {title}
+      <div style={{padding: '.5em', margin: 0}}>
+        <div style={{color: colors.pink200, fontSize: '5vw', textAlign: 'center'}}>{title}</div>
+        <div style={{fontSize: '3vw', padding: '1vw'}}>
+          {file ? <div dangerouslySetInnerHTML={text}></div> : <div>{inlineText}</div>}
         </div>
-        {file ? <div dangerouslySetInnerHTML={text}></div> : <div>{inlineText}</div>}
       </div>
     )
   }
