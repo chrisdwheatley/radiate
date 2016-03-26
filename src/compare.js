@@ -19,6 +19,10 @@ export class Compare extends Component {
       arrow = <p>\/</p>
     }
 
+    if (value === prevValue) {
+      arrow = <p>-</p>
+    }
+
     prevValue = value
 
     return arrow
