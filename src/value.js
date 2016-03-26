@@ -1,3 +1,4 @@
+import * as colors from 'material-ui/lib/styles/colors'
 import React, {Component} from 'react'
 import {Compare} from './compare'
 import fetch from './fetch'
@@ -27,9 +28,9 @@ export class Value extends Component {
     const {compare, freq, id, prefix, title, value} = this.props
 
     return (
-      <div style={{padding: '1em', margin: 0, textAlign: 'center'}}>
-        <div>{title}</div>
-        <div>
+      <div style={{padding: '.5em', margin: 0, textAlign: 'center'}}>
+        <div style={{color: colors.pink200, fontSize: '3vw'}}>{title}</div>
+        <div style={{fontSize: '3vw', fontWeight: 'bold', padding: '1vw'}}>
           {prefix ? prefix : ''}
           {value[id] ? value[id] : ''}
         </div>
