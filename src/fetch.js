@@ -4,11 +4,15 @@ export default function (file, api) {
   const resource = file ? `static/${file}` : api
   return fetch(resource)
     .then(response => {
-      const fileSplit = file.split('.')
-      if (fileSplit[fileSplit.length - 1] === 'json') {
-        return response.json()
+      if (file) {
+        const fileSplit = file.split('.')
+        if (fileSplit[fileSplit.length - 1] === 'json') {
+          return response.json()
+        } else {
+          return response.text()
+        }
       } else {
-        return response.text()
+        return response.json()
       }
     }).then(res => {
       return res
