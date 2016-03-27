@@ -14,7 +14,7 @@ export default class extends Component {
             </Text>
           </Cell>
           <Cell width='s' last-updated>
-            <Value title='GitHub Stars:' id='1' api='https://api.github.com/repos/swirlycheetah/es6-hot-module-replacement' prop='stargazers_count' freq={300} />
+            <Value title='GitHub Stars:' id='1' api='https://api.github.com/repos/swirlycheetah/radiate' prop='stargazers_count' freq={300} />
           </Cell>
         </Row>
         <Row>
