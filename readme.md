@@ -1,6 +1,6 @@
 # Radiate
 
-A responsive dashboard written in React - built for both small & large screens
+A responsive dashboard written in React - built for all screen sizes.
 
 ### Getting Started
 

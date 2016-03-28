@@ -1,7 +1,7 @@
 {
   "name": "Radiate",
   "version": "0.1.0",
-  "description": "A responsive dashboard written in React - built for both small & large screens",
+  "description": "A responsive dashboard written in React - built for all screen sizes",
   "main": "index.js",
   "scripts": {
     "lint": "standard",
