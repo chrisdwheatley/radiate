@@ -20,7 +20,7 @@ class Dashboard extends Component {
     })
 
     return (
-      <div style={{margin: 22}}>
+      <div style={{margin: 22, color: '#ffffff'}}>
         {children}
       </div>
     )
