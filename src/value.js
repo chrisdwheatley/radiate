@@ -29,8 +29,8 @@ export class Value extends Component {
 
     return (
       <div style={{padding: '.5em', margin: 0, textAlign: 'center'}}>
-        <div style={{color: colors.pink200, fontSize: '3vw'}}>{title}</div>
-        <div style={{fontSize: '3vw', fontWeight: 'bold'}}>
+        <div style={{color: colors.pink200}}>{title}</div>
+        <div style={{fontWeight: 'bold'}}>
           {prefix}
           {value[id]}
         </div>

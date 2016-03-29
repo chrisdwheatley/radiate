@@ -8,7 +8,7 @@ export class LastUpdated extends Component {
     const now = moment.default()
     const formattedNow = now.format('MMM Do h:mm:ss a')
     return (
-      <div style={{flex: 1, width: '100%', fontSize: '1.5vw', position: 'absolute', bottom: 0, padding: '1em 0', textAlign: 'center'}}>
+      <div style={{flex: 1, width: '100%', position: 'absolute', bottom: 0, padding: '1em 0', textAlign: 'center'}}>
         <span style={{color: colors.pink200}}>Last Updated:</span> {formattedNow}
       </div>
     )
