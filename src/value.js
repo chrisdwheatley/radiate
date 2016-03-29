@@ -28,7 +28,7 @@ export class Value extends Component {
     const {compare, freq, id, prefix, title, value} = this.props
 
     return (
-      <div style={{padding: '.5em', margin: 0, textAlign: 'center'}}>
+      <div style={{textAlign: 'center'}}>
         <div style={{color: colors.pink200}}>{title}</div>
         <div style={{fontWeight: 'bold'}}>
           {prefix}

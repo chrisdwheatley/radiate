@@ -24,8 +24,8 @@ export class Cell extends Component {
         desk={SIZES[width].desk}
         style={{padding: '0', marginBottom: 22, transition: 'width .5s ease-in-out'}}>
           <div
-            style={{padding: '0', margin: '0 11px'}}>
-            <Card style={{height: '29vh', background: colors.indigo500, position: 'relative'}}>
+            style={{margin: '0 11px'}}>
+            <Card style={{height: '29vh', background: colors.indigo500, position: 'relative', padding: '1vw'}}>
               {kids}
               {this.props['last-updated'] ? <LastUpdated /> : null}
             </Card>

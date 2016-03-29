@@ -38,7 +38,7 @@ export class Text extends Component {
     const inlineText = children.props.children
 
     return (
-      <div style={{padding: '.5em', margin: 0}}>
+      <div>
         <div style={{color: colors.pink200, textAlign: 'center'}}>{title}</div>
         <div style={{ padding: '1vw'}}>
           {file ? <div dangerouslySetInnerHTML={text}></div> : <div>{inlineText}</div>}
