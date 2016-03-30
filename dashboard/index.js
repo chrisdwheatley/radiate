@@ -10,7 +10,7 @@ export default class extends Component {
         <Row>
           <Cell width='m'>
             <Text title='Radiate'>
-              A responsive dashboard written in React - built for both small & large screens
+              A responsive dashboard written in React - built for all screen sizes
             </Text>
           </Cell>
           <Cell width='s' last-updated>
