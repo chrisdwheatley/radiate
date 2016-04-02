@@ -1,3 +1,21 @@
 * {
   margin: 0
 }
+
+@media screen and (max-width: 600px) {
+  * {
+    font-size: 104%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 959px) {
+  * {
+    font-size: 104%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  * {
+    font-size: 106%;
+  }
+}
