@@ -3,7 +3,10 @@ export default function (state = {}, action) {
     case 'poll':
       return {
         ...state,
-        [action.id]: action.res
+        [action.id]: {
+          res: action.res,
+          time: Date.now() / 1000
+        }
       }
     default:
       return state

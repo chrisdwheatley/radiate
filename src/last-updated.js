@@ -5,8 +5,9 @@ import * as colors from 'material-ui/lib/styles/colors'
 export class LastUpdated extends Component {
 
   render () {
-    const now = moment.default()
-    const formattedNow = now.format('MMM Do h:mm:ss a')
+    const {time} = this.props
+    const formattedNow = moment.unix(time).format('MMM Do h:mm:ss a')
+
     return (
       <div style={{flex: 1, width: '100%', position: 'absolute', bottom: 0, textAlign: 'center'}}>
         <span style={{color: colors.pink200}}>Last Updated:</span> {formattedNow}

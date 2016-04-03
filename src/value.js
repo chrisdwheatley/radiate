@@ -1,6 +1,7 @@
 import * as colors from 'material-ui/lib/styles/colors'
 import React, {Component} from 'react'
 import {Compare} from './compare'
+import {LastUpdated} from './last-updated'
 import fetch from './fetch'
 
 export class Value extends Component {
@@ -27,14 +28,18 @@ export class Value extends Component {
   render () {
     const {compare, freq, id, prefix, title, value} = this.props
 
+    const val = value[id] ? value[id].res : 'fetching...'
+    const time = value[id] ? value[id].time : Date.now() / 1000
+
     return (
       <div style={{textAlign: 'center'}}>
         <div style={{color: colors.pink200}}>{title}</div>
         <div style={{fontWeight: 'bold'}}>
           {prefix}
-          {value[id]}
+          {val}
         </div>
-        {compare ? <Compare value={value[id]} /> : ''}
+        {compare ? <Compare value={val} /> : ''}
+        <LastUpdated time={time} />
       </div>
     )
   }
