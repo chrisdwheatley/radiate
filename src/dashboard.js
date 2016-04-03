@@ -11,17 +11,19 @@ function mapStateToProps (state) {
 class Dashboard extends Component {
 
   render () {
-    const {dispatch, value} = this.props
-    const children = React.Children.map(this.props.children, (child) => {
+    const {children, dispatch, value} = this.props
+    const childComponents = React.Children.map(children, (child) => {
       return React.cloneElement(child, {
         onPoll: (id, res) => {
           dispatch(poll(id, res))
-        }, value})
+        },
+        value
+      })
     })
 
     return (
       <div style={{margin: 22, color: '#ffffff'}}>
-        {children}
+        {childComponents}
       </div>
     )
   }
