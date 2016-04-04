@@ -8,9 +8,6 @@ export class Compare extends Component {
     const {value} = this.props
     let arrow = <p></p>
 
-    // need to stop the <Value> component rerendering on each xhr poll
-    // will hopefully come with refactor of redux setup
-
     if (value > prevValue) {
       arrow = <p>/\</p>
     }

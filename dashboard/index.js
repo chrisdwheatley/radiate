@@ -6,15 +6,21 @@ import injectTapEventPlugin from 'react-tap-event-plugin'
 export default class extends Component {
   render () {
     return (
+      /**
+       * <Dashboard></Dashboard> is the wrapping component required to display your dashboard
+       */
       <Dashboard>
+        /**
+         * <Row></Row> is the horizontal row where cells reside
+         */
         <Row>
           <Cell width='m'>
             <Text title='Radiate'>
               A responsive dashboard written in React - built for all screen sizes
             </Text>
           </Cell>
-          <Cell width='s' last-updated>
-            <Value title='GitHub Stars:' id='1' api='https://api.github.com/repos/swirlycheetah/radiate' prop='stargazers_count' freq={300} />
+          <Cell width='s'>
+            <Value title='GitHub Stars:' id='1' api='https://api.github.com/repos/swirlycheetah/radiate' prop='stargazers_count' freq={300} last-updated/>
           </Cell>
         </Row>
         <Row>
