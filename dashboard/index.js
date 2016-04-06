@@ -6,13 +6,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin'
 export default class extends Component {
   render () {
     return (
-      /**
-       * <Dashboard></Dashboard> is the wrapping component required to display your dashboard
-       */
       <Dashboard>
-        /**
-         * <Row></Row> is the horizontal row where cells reside
-         */
         <Row>
           <Cell width='m'>
             <Text title='Radiate'>
