@@ -20,15 +20,15 @@ export default class extends Component {
             </Text>
           </Cell>
           <Cell width='s'>
-            <Value title='GitHub Stars:' id='1' api='https://api.github.com/repos/swirlycheetah/radiate' prop='stargazers_count' freq={300} last-updated/>
+            <Value title='GitHub Stars:' api='https://api.github.com/repos/swirlycheetah/radiate' prop='stargazers_count' freq={300} last-updated/>
           </Cell>
         </Row>
         <Row>
           <Cell width='s' last-updated>
-            <Value title='Share Price:' id='2' file='shareprice.json' prop='price' freq={10} prefix='$' compare />
+            <Value title='Share Price:' file='shareprice.json' prop='price' freq={10} prefix='$' compare />
           </Cell>
           <Cell width='m'>
-            <Value title='Today&#8217;s Special:' id='3' file='weeklymenu.json' prop={new Date().getDay()} freq={43200} />
+            <Value title='Today&#8217;s Special:' file='weeklymenu.json' prop={new Date().getDay()} freq={43200} />
           </Cell>
         </Row>
         <Row>

@@ -7,7 +7,8 @@ import fetch from './fetch'
 export class Value extends Component {
 
   componentDidMount () {
-    const {api, id, file, freq, onPoll, prop} = this.props
+    const {api, file, freq, onPoll, prop} = this.props
+    const id = this._reactInternalInstance._rootNodeID
 
     if (file || api) {
       fetch(file, api).then(res => {
@@ -26,7 +27,8 @@ export class Value extends Component {
   }
 
   render () {
-    const {compare, freq, id, prefix, title, value} = this.props
+    const {compare, freq, prefix, title, value} = this.props
+    const id = this._reactInternalInstance._rootNodeID
 
     const val = value[id] ? value[id].res : 'fetching...'
     const time = value[id] ? value[id].time : Date.now() / 1000
