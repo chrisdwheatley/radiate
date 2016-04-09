@@ -1,3 +1,4 @@
+import FontIcon from 'material-ui/lib/font-icon'
 import Radium from 'radium'
 import React, {Component} from 'react'
 
@@ -5,7 +6,10 @@ let prevValue
 
 const styles = {
   compareIcon: {
-    fontSize: '180%'
+    fontSize: '150%',
+    lineHeight: '0.75',
+    color: 'white',
+    fontWeight: 'bold'
   }
 }
 
@@ -17,15 +21,15 @@ export class Compare extends Component {
     let arrow = null
 
     if (value > prevValue) {
-      arrow = '/\\'
+      arrow = <FontIcon style={styles.compareIcon} className='material-icons'>arrow_upward</FontIcon>
     }
 
     if (value < prevValue) {
-      arrow = '\\/'
+      arrow = <FontIcon style={styles.compareIcon} className='material-icons'>arrow_downward</FontIcon>
     }
 
     if (value === prevValue) {
-      arrow = '-'
+      arrow = <span style={styles.compareIcon}>-</span>
     }
 
     prevValue = value
