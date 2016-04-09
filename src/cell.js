@@ -3,11 +3,12 @@ import {Card, CardTitle} from 'material-ui/lib'
 import Radium from 'radium'
 import React, {Component} from 'react'
 import {Cell as FlexrCell} from 'react-flexr'
+import uniqeId from 'lodash.uniqueid'
 import {SIZES} from './sizes'
 
 const styles = {
   cell: {
-    padding: '0',
+    padding: 0,
     marginBottom: 22,
     transition: 'width .5s ease-in-out'
   },
@@ -24,12 +25,18 @@ const styles = {
 
 @Radium
 export class Cell extends Component {
+  componentWillMount () {
+    this.setState({
+      id: uniqeId()
+    })
+  }
 
   render () {
     const {children, onPoll, value, width} = this.props
     const childComponents = React.Children.map(children, (child) => {
       return React.cloneElement(child, {
         children,
+        id: this.state.id,
         onPoll,
         value
       })
