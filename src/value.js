@@ -1,9 +1,23 @@
 import * as colors from 'material-ui/lib/styles/colors'
+import Radium from 'radium'
 import React, {Component} from 'react'
 import {Compare} from './compare'
 import {LastUpdated} from './last-updated'
 import fetch from './fetch'
 
+const styles = {
+  wrapper: {
+    textAlign: 'center'
+  },
+  title: {
+    color: colors.pink200
+  },
+  body: {
+    fontWeight: 'bold'
+  }
+}
+
+@Radium
 export class Value extends Component {
 
   componentDidMount () {
@@ -34,9 +48,9 @@ export class Value extends Component {
     const time = value[id] ? value[id].time : Date.now() / 1000
 
     return (
-      <div style={{textAlign: 'center'}}>
-        <div style={{color: colors.pink200}}>{title}</div>
-        <div style={{fontWeight: 'bold'}}>
+      <div style={styles.wrapper}>
+        <div style={styles.title}>{title}</div>
+        <div style={styles.body}>
           {prefix}
           {val}
         </div>

@@ -1,6 +1,14 @@
+import Radium from 'radium'
 import React, {Component} from 'react'
 import {Grid} from 'react-flexr'
 
+const styles = {
+  grid: {
+    margin: '0 -11px'
+  }
+}
+
+@Radium
 export class Row extends Component {
 
   render () {
@@ -11,9 +19,10 @@ export class Row extends Component {
         value
       })
     })
+
     return (
       <Grid
-        style={{margin: '0 -11px'}}>
+        style={styles.grid}>
         {children}
       </Grid>
     )

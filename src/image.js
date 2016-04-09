@@ -1,5 +1,14 @@
+import Radium from 'radium'
 import React, {Component} from 'react'
 
+const styles = {
+  image: {
+    width: '100%',
+    height: '100%'
+  }
+}
+
+@Radium
 export class Image extends Component {
 
   render () {
@@ -8,7 +17,7 @@ export class Image extends Component {
     const image = file ? `static/${file}` : src || source
 
     return (
-      <img src={image} style={{width: '100%', height: '100%'}} />
+      <img src={image} style={styles.image} />
     )
   }
 }

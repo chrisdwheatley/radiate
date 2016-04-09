@@ -1,6 +1,14 @@
+import Radium from 'radium'
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import poll from './actions'
+
+const styles = {
+  dashboard: {
+    margin: 22,
+    color: '#ffffff'
+  }
+}
 
 function mapStateToProps (state) {
   return {
@@ -8,6 +16,7 @@ function mapStateToProps (state) {
   }
 }
 
+@Radium
 class Dashboard extends Component {
 
   render () {
@@ -22,7 +31,7 @@ class Dashboard extends Component {
     })
 
     return (
-      <div style={{margin: 22, color: '#ffffff'}}>
+      <div style={styles.dashboard}>
         {childComponents}
       </div>
     )

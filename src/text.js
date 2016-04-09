@@ -1,8 +1,20 @@
 import {parse} from 'markdown'
 import * as colors from 'material-ui/lib/styles/colors'
+import Radium from 'radium'
 import React, {Component} from 'react'
 import fetch from './fetch'
 
+const styles = {
+  title:{
+    color: colors.pink200,
+    textAlign: 'center'
+  },
+  body: {
+    padding: '1vw'
+  }
+}
+
+@Radium
 export class Text extends Component {
 
   constructor(props) {
@@ -39,8 +51,8 @@ export class Text extends Component {
 
     return (
       <div>
-        <div style={{color: colors.pink200, textAlign: 'center'}}>{title}</div>
-        <div style={{ padding: '1vw'}}>
+        <div style={styles.title}>{title}</div>
+        <div style={styles.body}>
           {file ? <div dangerouslySetInnerHTML={text}></div> : <div>{inlineText}</div>}
         </div>
       </div>
