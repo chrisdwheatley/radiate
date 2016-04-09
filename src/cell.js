@@ -3,7 +3,7 @@ import {Card, CardTitle} from 'material-ui/lib'
 import Radium from 'radium'
 import React, {Component} from 'react'
 import {Cell as FlexrCell} from 'react-flexr'
-import uniqeId from 'lodash.uniqueid'
+import uniqueId from 'lodash.uniqueid'
 import {SIZES} from './sizes'
 
 const styles = {
@@ -27,7 +27,7 @@ const styles = {
 export class Cell extends Component {
   componentWillMount () {
     this.setState({
-      id: uniqeId()
+      id: uniqueId()
     })
   }
 
