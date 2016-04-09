@@ -10,10 +10,21 @@ const styles = {
     textAlign: 'center'
   },
   title: {
-    color: colors.pink200
+    color: colors.pink200,
+    '@media screen and (max-width: 600px)': {
+      fontSize: '150%'
+    },
+    '@media screen and (min-width: 601px) and (max-width: 959px)': {
+      fontSize: '160%'
+    },
+    '@media screen and (min-width: 960px)': {
+      fontSize: '170%'
+    }
   },
   body: {
-    fontWeight: 'bold'
+    padding: '1vw',
+    fontWeight: 'bold',
+    fontSize: '250%'
   }
 }
 

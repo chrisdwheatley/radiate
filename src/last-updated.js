@@ -5,11 +5,20 @@ import * as colors from 'material-ui/lib/styles/colors'
 
 const styles = {
   wrapper: {
-    flex: 1,
-    width: '100%',
+    left: 0,
     position: 'absolute',
-    bottom: 0,
-    textAlign: 'center'
+    bottom: '11px',
+    width: '100%',
+    textAlign: 'center',
+    '@media screen and (max-width: 600px)': {
+      fontSize: '120%'
+    },
+    '@media screen and (min-width: 601px) and (max-width: 959px)': {
+      fontSize: '130%'
+    },
+    '@media screen and (min-width: 960px)': {
+      fontSize: '140%'
+    }
   },
   text: {
     color: colors.pink200

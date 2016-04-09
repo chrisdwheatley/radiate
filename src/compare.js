@@ -1,27 +1,39 @@
+import Radium from 'radium'
 import React, {Component} from 'react'
 
 let prevValue
 
+const styles = {
+  compareIcon: {
+    fontSize: '180%'
+  }
+}
+
+@Radium
 export class Compare extends Component {
 
   render () {
     const {value} = this.props
-    let arrow = <p></p>
+    let arrow = null
 
     if (value > prevValue) {
-      arrow = <p>/\</p>
+      arrow = '/\\'
     }
 
     if (value < prevValue) {
-      arrow = <p>\/</p>
+      arrow = '\\/'
     }
 
     if (value === prevValue) {
-      arrow = <p>-</p>
+      arrow = '-'
     }
 
     prevValue = value
 
-    return arrow
+    return (
+      <div style={styles.compareIcon}>
+        {arrow}
+      </div>
+    )
   }
 }
