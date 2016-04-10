@@ -52,6 +52,7 @@ export class Value extends Component {
 
   render () {
     const {compare, freq, id, prefix, title, value} = this.props
+    const lastUpdated = this.props['last-updated']
 
     const val = value[id] ? value[id].res : 'fetching...'
     const time = value[id] ? value[id].time : Date.now() / 1000
@@ -63,8 +64,8 @@ export class Value extends Component {
           {prefix}
           {val}
         </div>
-        {compare ? <Compare value={val} /> : ''}
-        <LastUpdated time={time} />
+        {compare ? <Compare value={val} /> : null}
+        {lastUpdated? <LastUpdated time={time} />: null}
       </div>
     )
   }
