@@ -21,7 +21,7 @@
     "copy-webpack-plugin": "^0.2.0",
     "css-loader": "^0.21.0",
     "d3": "^3.5.9",
-    "glare": "^0.1.2",
+    "glare": "^0.2.0",
     "lodash.uniqueid": "^4.0.0",
     "markdown": "^0.5.0",
     "material-ui": "^0.13.4",
