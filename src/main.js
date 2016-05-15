@@ -1,13 +1,12 @@
-import {StyleRoot} from 'radium';
+import {StyleRoot} from 'radium'
 import React from 'react'
 import {render} from 'react-dom'
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
 import Dashboard from '../dashboard'
-import 'react-flexr/styles.css'
-import poll from './reducers'
+import reducer from './reducers'
 
-const store = createStore(poll)
+const store = createStore(reducer)
 
 render(
   <Provider store={store}>

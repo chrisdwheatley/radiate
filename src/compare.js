@@ -6,7 +6,6 @@ let prevValue
 
 const styles = {
   compareIcon: {
-    fontSize: '150%',
     lineHeight: '0.75',
     color: 'white',
     fontWeight: 'bold'

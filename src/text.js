@@ -9,27 +9,11 @@ const styles = {
   title: {
     color: colors.pink200,
     textAlign: 'center',
-    '@media screen and (max-width: 600px)': {
-      fontSize: '150%'
-    },
-    '@media screen and (min-width: 601px) and (max-width: 959px)': {
-      fontSize: '160%'
-    },
-    '@media screen and (min-width: 960px)': {
-      fontSize: '170%'
-    }
+
   },
   body: {
-    padding: '1vw',
-    '@media screen and (max-width: 600px)': {
-      fontSize: '150%'
-    },
-    '@media screen and (min-width: 601px) and (max-width: 959px)': {
-      fontSize: '160%'
-    },
-    '@media screen and (min-width: 960px)': {
-      fontSize: '170%'
-    }
+    padding: '1vw'
+
   }
 }
 
