@@ -1,7 +1,14 @@
-export default function (id, res) {
+export function poll(id, res) {
   return {
-    type: 'poll',
+    type: 'POLL',
     id,
     res
+  }
+}
+
+export function resize (width) {
+  return {
+    type: 'RESIZE',
+    width
   }
 }
