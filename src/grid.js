@@ -5,21 +5,26 @@ export class Grid extends Component {
   componentDidMount() {
     const {onResize} = this.props
 
-    const mediaQuery = window.matchMedia('(max-width: 600px)')
+    const mediaQueries = [
+      window.matchMedia('(max-width: 600px)'),
+      window.matchMedia('(min-width: 601px) and (max-width: 959px)'),
+      window.matchMedia('(min-width: 960px)')
+    ]
 
-    if (mediaQuery.matches) {
-      onResize('palm')
-    } else {
-      onResize('desk')
-    }
-
-    mediaQuery.addListener((mq) => {
-      if (mq.matches) {
+    function mediaqueryresponse() {
+      if (mediaQueries[0].matches) {
         onResize('palm')
-      } else {
+      } else if (mediaQueries[1].matches) {
+        onResize('lap')
+      } else if (mediaQueries[2].matches) {
         onResize('desk')
       }
-    })
+    }
+
+    for (var i = 0; i < mediaQueries.length; i++){
+      mediaqueryresponse()
+      mediaQueries[i].addListener(mediaqueryresponse)
+    }
   }
 
   render () {
