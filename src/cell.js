@@ -19,7 +19,7 @@ const styles = {
 export class Cell extends Component {
   componentWillMount () {
     this.setState({
-      id: uniqueId()
+      id: uniqueId('value_')
     })
   }
 
