@@ -1,29 +1,21 @@
 import React, {Component} from 'react'
 import {Grid as GridLayoutGrid} from 'glare'
+import {mediaQueries} from './mediaQueries'
 
 export class Grid extends Component {
   componentDidMount() {
     const {onResize} = this.props
 
-    const mediaQueries = [
-      window.matchMedia('(max-width: 600px)'),
-      window.matchMedia('(min-width: 601px) and (max-width: 959px)'),
-      window.matchMedia('(min-width: 960px)')
-    ]
-
-    function mediaqueryresponse() {
-      if (mediaQueries[0].matches) {
-        onResize('palm')
-      } else if (mediaQueries[1].matches) {
-        onResize('lap')
-      } else if (mediaQueries[2].matches) {
-        onResize('desk')
+    function mediaqueryresponse(i) {
+      if (mediaQueries[i].size.matches) {
+        onResize(mediaQueries[i].name)
       }
     }
 
     for (var i = 0; i < mediaQueries.length; i++){
-      mediaqueryresponse()
-      mediaQueries[i].addListener(mediaqueryresponse)
+      mediaqueryresponse(i)
+      // need to debounce listener
+      mediaQueries[i].size.addListener(mediaqueryresponse.bind(null, i))
     }
   }
 
