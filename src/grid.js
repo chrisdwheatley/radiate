@@ -1,22 +1,12 @@
 import React, {Component} from 'react'
 import {Grid as GridLayoutGrid} from 'glare'
-import {mediaQueries} from './mediaQueries'
+import {mediaQueries, setupMqs} from './mediaQueries'
 
 export class Grid extends Component {
   componentDidMount() {
     const {onResize} = this.props
 
-    function mediaqueryresponse(i) {
-      if (mediaQueries[i].size.matches) {
-        onResize(mediaQueries[i].name)
-      }
-    }
-
-    for (var i = 0; i < mediaQueries.length; i++){
-      mediaqueryresponse(i)
-      // need to debounce listener
-      mediaQueries[i].size.addListener(mediaqueryresponse.bind(null, i))
-    }
+    setupMqs(onResize)
   }
 
   render () {
