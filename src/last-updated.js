@@ -21,7 +21,7 @@ export class LastUpdated extends Component {
 
   render () {
     const {time} = this.props
-    const formattedNow = moment.unix(time).format('MMM Do h:mm:ssa')
+    const formattedNow = moment.unix(time).format('MMM Do h:mm a')
 
     return (
       <div style={styles.wrapper}>
