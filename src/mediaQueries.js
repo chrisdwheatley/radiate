@@ -1,28 +1,28 @@
-export const mediaQueries = [
-  {
-    name: 'palm',
-    size: window.matchMedia('(max-width: 600px)')
+export const mediaQueries = {
+  palm: {
+    size: window.matchMedia('(max-width: 600px)'),
+    fontSize: '3vh'
   },
-  {
-    name: 'lap',
-    size: window.matchMedia('(min-width: 601px) and (max-width: 959px)')
+  lap: {
+    size: window.matchMedia('(min-width: 601px) and (max-width: 959px)'),
+    fontSize: '4.5vh'
   },
-  {
-    name: 'desk',
-    size: window.matchMedia('(min-width: 960px)')
+  desk: {
+    size: window.matchMedia('(min-width: 960px)'),
+    fontSize: '4.25vh'
   }
-]
+}
 
 export function setupMqs(fn) {
-  function mediaqueryresponse(i, action) {
-    if (mediaQueries[i].size.matches) {
-      action(mediaQueries[i].name)
+  function mediaqueryresponse(key, action) {
+    if (mediaQueries[key].size.matches) {
+      action(key)
     }
   }
 
-  for (var i = 0; i < mediaQueries.length; i++) {
-    mediaqueryresponse(i, fn)
-    // need to debounce listener
-    mediaQueries[i].size.addListener(mediaqueryresponse.bind(null, i, fn))
-  }
+  Object.keys(mediaQueries).forEach(function(key) {
+    mediaqueryresponse(key, fn)
+      // need to debounce listener
+    mediaQueries[key].size.addListener(mediaqueryresponse.bind(null, key, fn))
+  });
 }
