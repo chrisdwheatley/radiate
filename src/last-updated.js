@@ -8,7 +8,8 @@ const styles = {
     left: 0,
     bottom: 1,
     width: '100%',
-    textAlign: 'center'
+    textAlign: 'center',
+    fontSize: '66%'
   },
   text: {
     color: colors.pink200
@@ -20,7 +21,7 @@ export class LastUpdated extends Component {
 
   render () {
     const {time} = this.props
-    const formattedNow = moment.unix(time).format('MMM Do h:mm:ss a')
+    const formattedNow = moment.unix(time).format('MMM Do h:mm:ssa')
 
     return (
       <div style={styles.wrapper}>
