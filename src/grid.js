@@ -26,7 +26,8 @@ export class Grid extends Component {
       <GridLayoutGrid
         layout={layout[value.width || 'palm']}
         style={{
-          gridTemplateRows: `${Math.floor(rowHeight) - .1}vh `.repeat(rows)
+          gridTemplateRows: `${Math.floor(rowHeight) - .1}vh `.repeat(rows),
+          fontSize: mediaQueries[value.width || 'palm'].fontSize
         }}>
         {children}
       </GridLayoutGrid>
