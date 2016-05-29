@@ -18,6 +18,17 @@
 
     <dashboard></dashboard>
 
+    <script>
+      if (!('gridTemplateColumns' in document.body.style)) {
+        alert(
+          'Radiate uses CSS Grid Layout, which is currently in ' +
+          'development in most browsers.\n\n' +
+          'Support can be enabled in Chrome by toggling ' +
+          'chrome://flags/#enable-experimental-web-platform-features on.'
+        )
+      }
+    </script>
+
     <script src="/static/bundle.js"></script>
 
   </body>
