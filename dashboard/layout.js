@@ -9,13 +9,12 @@ export const layout = {
   lap: [
     'title title',
     'menu shares',
-    'stars md',
+    'menu md',
     'stars md'
   ],
   desk: [
     'title title menu',
-    'shares md menu',
-    'stars stars menu',
-    'stars stars menu'
+    'shares stars menu',
+    'md md md',
   ]
 }

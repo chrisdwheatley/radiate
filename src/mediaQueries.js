@@ -1,7 +1,7 @@
 export const mediaQueries = {
   palm: {
     size: window.matchMedia('(max-width: 600px)'),
-    fontSize: '3vh'
+    fontSize: '3.5vh'
   },
   lap: {
     size: window.matchMedia('(min-width: 601px) and (max-width: 959px)'),
@@ -9,7 +9,7 @@ export const mediaQueries = {
   },
   desk: {
     size: window.matchMedia('(min-width: 960px)'),
-    fontSize: '4.25vh'
+    fontSize: '5.5vh'
   }
 }
 
