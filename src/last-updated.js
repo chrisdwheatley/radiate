@@ -9,7 +9,7 @@ const styles = {
     bottom: 1,
     width: '100%',
     textAlign: 'center',
-    fontSize: '66%'
+    fontSize: '60%'
   },
   text: {
     color: colors.pink200

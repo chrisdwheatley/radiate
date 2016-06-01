@@ -24,5 +24,5 @@ export function setupMqs(fn) {
     mediaqueryresponse(key, fn)
       // need to debounce listener
     mediaQueries[key].size.addListener(mediaqueryresponse.bind(null, key, fn))
-  });
+  })
 }

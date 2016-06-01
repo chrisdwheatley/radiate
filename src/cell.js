@@ -8,10 +8,11 @@ import {SIZES} from './sizes'
 const styles = {
   cell: {
     padding: '1vw',
-    marginBottom: 1,
-    transition: 'width .5s ease-in-out',
-    margin: 1,
-    background: colors.indigo500
+    margin: 5,
+    background: colors.indigo500,
+    boxShadow: '0px 1px 6px rgba(0, 0, 0, 0.12), 0px 1px 4px rgba(0, 0, 0, 0.24)',
+    boxSizing: 'border-box',
+    borderRadius: 2
   }
 }
 
