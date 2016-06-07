@@ -1,20 +1,20 @@
 export const layout = {
   palm: [
     'title',
-    'menu',
+    'dayoftheweek',
     'shares',
     'stars',
     'md'
   ],
   lap: [
     'title title',
-    'menu shares',
-    'menu md',
+    'dayoftheweek shares',
+    'dayoftheweek md',
     'stars md'
   ],
   desk: [
-    'title title menu',
-    'shares stars menu',
+    'title title dayoftheweek',
+    'shares stars dayoftheweek',
     'md md md',
   ]
 }

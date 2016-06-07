@@ -12,8 +12,8 @@ export default class extends Component {
               A responsive dashboard written in React - built for all screen sizes
             </Text>
           </Cell>
-          <Cell name='menu'>
-            <Value title='Today&#8217;s Special:' file='weeklymenu.json' prop={new Date().getDay()} freq={43200} />
+          <Cell name='dayoftheweek'>
+            <Value title='Day of the week' file='daysoftheweek.json' prop={new Date().getDay()} freq={43200} />
           </Cell>
           <Cell name='shares'>
             <Value title='Share Price:' file='shareprice.json' prop='price' freq={10} prefix='$' compare last-updated/>
