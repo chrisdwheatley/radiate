@@ -7,14 +7,16 @@ import {default as Enable} from './enable'
 const styles = {
   cell: {
     padding: '1vw',
-    margin: 10,
-    background: colors.indigo500,
+    margin: 5,
     boxShadow: '0px 1px 6px rgba(0, 0, 0, 0.12), 0px 1px 4px rgba(0, 0, 0, 0.24)',
     boxSizing: 'border-box',
     borderRadius: 2,
     color: '#ffffff',
     fontFamily: 'Roboto, sans-serif',
-    fontSize: 22
+    fontSize: 22,
+    color: 'white',
+    opacity: .87,
+    background: `linear-gradient(22.5deg, rgba(103, 58, 183, .75), ${colors.deepPurple500})`
   },
   copy: {
     margin: 20
