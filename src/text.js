@@ -7,7 +7,7 @@ import fetch from './fetch'
 
 const styles = {
   title: {
-    color: colors.pink200,
+    color: colors.white,
     textAlign: 'center',
 
   },

@@ -20,7 +20,7 @@ const styles = {
     margin: 20
   },
   link: {
-    color: colors.pink200
+    color: colors.white
   }
 }
 

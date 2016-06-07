@@ -12,7 +12,7 @@ const styles = {
     fontSize: '60%'
   },
   text: {
-    color: colors.pink200
+    color: colors.white
   }
 }
 

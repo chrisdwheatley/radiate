@@ -10,7 +10,7 @@ const styles = {
     textAlign: 'center'
   },
   title: {
-    color: colors.pink200
+    color: colors.white
   },
   body: {
     padding: '1vw',
