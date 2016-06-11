@@ -1,7 +1,7 @@
+import * as colors from 'material-ui/lib/styles/colors'
 import Radium from 'radium'
 import React, {Component} from 'react'
 import * as moment from 'moment'
-import * as colors from 'material-ui/lib/styles/colors'
 
 const styles = {
   wrapper: {
@@ -12,7 +12,7 @@ const styles = {
     fontSize: '60%'
   },
   text: {
-    color: colors.white
+    color: colors.darkWhite
   }
 }
 

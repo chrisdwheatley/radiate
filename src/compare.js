@@ -1,3 +1,4 @@
+import * as colors from 'material-ui/lib/styles/colors'
 import FontIcon from 'material-ui/lib/font-icon'
 import Radium from 'radium'
 import React, {Component} from 'react'
@@ -7,7 +8,7 @@ let prevValue
 const styles = {
   compareIcon: {
     lineHeight: '0.75',
-    color: 'white',
+    color: colors.darkWhite,
     fontWeight: 'bold'
   }
 }

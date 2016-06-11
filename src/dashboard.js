@@ -1,3 +1,4 @@
+import * as colors from 'material-ui/lib/styles/colors'
 import Radium from 'radium'
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
@@ -5,7 +6,7 @@ import {poll, resize} from './actions'
 
 const styles = {
   dashboard: {
-    color: '#ffffff',
+    color: colors.darkWhite,
     padding: 5,
     fontFamily: 'Roboto, sans-serif'
   }
