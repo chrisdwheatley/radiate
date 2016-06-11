@@ -6,7 +6,7 @@ import {poll, resize} from './actions'
 
 const styles = {
   dashboard: {
-    color: colors.darkWhite,
+    color: colors.fullWhite,
     padding: 5,
     fontFamily: 'Roboto, sans-serif'
   }

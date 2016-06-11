@@ -4,13 +4,11 @@ import React, {Component} from 'react'
 import {Compare} from './compare'
 import {LastUpdated} from './last-updated'
 import fetch from './fetch'
+import {default as Title} from './title'
 
 const styles = {
   wrapper: {
     textAlign: 'center'
-  },
-  title: {
-    color: colors.darkWhite
   },
   body: {
     padding: '1vw',
@@ -48,7 +46,7 @@ export class Value extends Component {
 
     return (
       <div style={styles.wrapper}>
-        <div style={styles.title}>{title}</div>
+        <Title title={title} />
         <div style={styles.body}>
           {prefix}
           {val}

@@ -1,4 +1,3 @@
-import * as colors from 'material-ui/lib/styles/colors'
 import Radium from 'radium'
 import React, {Component} from 'react'
 import * as moment from 'moment'
@@ -9,10 +8,8 @@ const styles = {
     bottom: 1,
     width: '100%',
     textAlign: 'center',
-    fontSize: '60%'
-  },
-  text: {
-    color: colors.darkWhite
+    fontSize: '60%',
+    color: 'rgba(255, 255, 255, 0.70)'
   }
 }
 
@@ -24,9 +21,7 @@ export class LastUpdated extends Component {
     const formattedNow = moment.unix(time).format('MMM Do h:mm a')
 
     return (
-      <div style={styles.wrapper}>
-        <span style={styles.text}>Last Updated:</span> {formattedNow}
-      </div>
+      <div style={styles.wrapper}>Last Updated: {formattedNow}</div>
     )
   }
 }

@@ -9,23 +9,23 @@ const colorConfig = [
   {
     light: 'rgba(103, 58, 183, .75)',
     main: colors.deepPurple500,
-    fg: colors.darkWhite
+    fg: colors.fullWhite
   }, {
     light: 'rgba(76, 175, 80, .75)',
     main: colors.green500,
-    fg: colors.darkWhite
+    fg: colors.fullWhite
   }, {
     light: 'rgba(233, 30, 99, .75)',
     main: colors.pink500,
-    fg: colors.darkWhite
+    fg: colors.fullWhite
   }, {
     light: 'rgba(33, 150, 243, .75)',
     main: colors.blue500,
-    fg: colors.darkWhite
+    fg: colors.fullWhite
   }, {
     light: 'rgba(0, 150, 136, .75)',
     main: colors.teal500,
-    fg: colors.darkWhite
+    fg: colors.fullWhite
   }
 ]
 
@@ -52,7 +52,7 @@ export class Cell extends Component {
     const {children, name, onPoll, value, width} = this.props
 
     const randomColors = {
-      color: colors.darkWhite,
+      color: colors.fullWhite,
       background: `linear-gradient(22.5deg, ${colorConfig[this.state.colorItem].light} , ${colorConfig[this.state.colorItem].main})`
     }
 

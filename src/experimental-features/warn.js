@@ -11,17 +11,17 @@ const styles = {
     boxShadow: '0px 1px 6px rgba(0, 0, 0, 0.12), 0px 1px 4px rgba(0, 0, 0, 0.24)',
     boxSizing: 'border-box',
     borderRadius: 2,
-    color: colors.darkWhite,
+    color: colors.fullWhite,
     fontFamily: 'Roboto, sans-serif',
     fontSize: 22,
-    color: colors.darkWhite,
+    color: colors.fullWhite,
     background: `linear-gradient(22.5deg, rgba(103, 58, 183, .75), ${colors.deepPurple500})`
   },
   copy: {
     margin: 20
   },
   link: {
-    color: colors.darkWhite
+    color: colors.fullWhite
   }
 }
 

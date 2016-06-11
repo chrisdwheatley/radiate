@@ -4,7 +4,7 @@ import React, {PropTypes} from 'react'
 
 const styles = {
   link: {
-    color: colors.darkWhite,
+    color: colors.fullWhite,
     fontWeight: 'bold'
   },
   ul: {

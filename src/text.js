@@ -1,19 +1,13 @@
 import {parse} from 'markdown'
-import * as colors from 'material-ui/lib/styles/colors'
 import Radium from 'radium'
 import React, {Component} from 'react'
 import {findDOMNode} from 'react-dom'
 import fetch from './fetch'
+import {default as Title} from './title'
 
 const styles = {
-  title: {
-    color: colors.darkWhite,
-    textAlign: 'center',
-
-  },
   body: {
     padding: '1vw'
-
   }
 }
 
@@ -54,7 +48,7 @@ export class Text extends Component {
 
     return (
       <div>
-        <div style={styles.title}>{title}</div>
+        <Title title={title} />
         <div style={styles.body}>
           {file ? <div dangerouslySetInnerHTML={text}></div> : <div>{inlineText}</div>}
         </div>
