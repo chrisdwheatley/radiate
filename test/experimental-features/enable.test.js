@@ -8,7 +8,7 @@ chai.use(chaiEnzyme())
 
 describe('<Enable />', () => {
 
-  describe('if the operating system is Android', () => {
+  describe('when the operating system is Android', () => {
 
     it('should display a message warning users that their OS & browser combination is not supported', () => {
       const enable = shallow(<Enable browser={'foo'} os={'Android'} />)
@@ -20,7 +20,7 @@ describe('<Enable />', () => {
 
   })
 
-  describe('if the operating system is iOS', () => {
+  describe('when the operating system is iOS', () => {
 
     it('should display a message warning users that their OS & browser combination is not supported', () => {
       const enable = shallow(<Enable browser={'bar'} os={'iOS'} />)
@@ -32,9 +32,9 @@ describe('<Enable />', () => {
 
   })
 
-  describe('if the operating system is not Android or iOS', () => {
+  describe('when the operating system is not Android or iOS', () => {
 
-    describe('if the browser is Chrome', () => {
+    describe('when the browser is Chrome', () => {
 
       it('should display the information to enable CSS Grid Layout on Chrome', () => {
 
@@ -48,7 +48,7 @@ describe('<Enable />', () => {
 
     })
 
-    describe('if the browser is Firefox', () => {
+    describe('when the browser is Firefox', () => {
 
       it('should display the information to enable CSS Grid Layout on Firefox', () => {
 

@@ -3,6 +3,7 @@ import Radium from 'radium'
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {poll, resize} from './actions'
+import {default as VersionOverlay} from './versioning/version-overlay'
 
 const styles = {
   dashboard: {
@@ -21,7 +22,7 @@ function mapStateToProps (state) {
 class Dashboard extends Component {
 
   render () {
-    const {children, dispatch, value, dark, light} = this.props
+    const {children, dark, dispatch, light, value} = this.props
 
     const childComponents = React.Children.map(children, (child) => {
       return React.cloneElement(child, {
@@ -38,6 +39,7 @@ class Dashboard extends Component {
     return (
       <div style={Object.assign(styles.dashboard, {background: dark ? 'black' : 'white'})}>
         {childComponents}
+        <VersionOverlay currentVersion='0.1.0'/>
       </div>
     )
   }

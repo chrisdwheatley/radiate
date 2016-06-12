@@ -8,9 +8,9 @@ chai.use(chaiEnzyme())
 
 describe('<Title />', () => {
 
-  describe('if the operating system is Android', () => {
+  describe('when the title value is passed through', () => {
 
-    it('should display a message warning users that their OS & browser combination is not supported', () => {
+    it('should display the title text', () => {
       const title = shallow(<Title title='foo' />)
 
       expect(title).to.contain.text('foo')
