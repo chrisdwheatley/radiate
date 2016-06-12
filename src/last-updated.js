@@ -8,7 +8,7 @@ const styles = {
     bottom: 1,
     width: '100%',
     textAlign: 'center',
-    fontSize: '60%',
+    fontSize: '50%',
     color: 'rgba(255, 255, 255, 0.70)'
   }
 }

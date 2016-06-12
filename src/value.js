@@ -12,7 +12,7 @@ const styles = {
   },
   body: {
     padding: '1vw',
-    fontWeight: 'bold'
+    fontWeight: 700
   }
 }
 

@@ -7,7 +7,9 @@ import {default as Title} from './title'
 
 const styles = {
   body: {
-    padding: '1vw'
+    padding: '1vw',
+    fontWeight: 700,
+    lineHeight: 1.2
   }
 }
 

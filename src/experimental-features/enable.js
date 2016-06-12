@@ -5,7 +5,7 @@ import React, {PropTypes} from 'react'
 const styles = {
   link: {
     color: colors.fullWhite,
-    fontWeight: 'bold'
+    fontWeight: 700
   },
   ul: {
     margin: 20
