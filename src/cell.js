@@ -1,33 +1,9 @@
-import * as colors from 'material-ui/lib/styles/colors'
+import {colorConfig} from './colors'
 import Radium from 'radium'
 import React, {Component} from 'react'
 import {Cell as GridLayoutCell} from 'glare'
 import uniqueId from 'lodash.uniqueid'
 import {SIZES} from './sizes'
-
-const colorConfig = [
-  {
-    light: 'rgba(103, 58, 183, .75)',
-    main: colors.deepPurple500,
-    fg: colors.fullWhite
-  }, {
-    light: 'rgba(76, 175, 80, .75)',
-    main: colors.green500,
-    fg: colors.fullWhite
-  }, {
-    light: 'rgba(233, 30, 99, .75)',
-    main: colors.pink500,
-    fg: colors.fullWhite
-  }, {
-    light: 'rgba(33, 150, 243, .75)',
-    main: colors.blue500,
-    fg: colors.fullWhite
-  }, {
-    light: 'rgba(0, 150, 136, .75)',
-    main: colors.teal500,
-    fg: colors.fullWhite
-  }
-]
 
 const styles = {
   cell: {
@@ -35,7 +11,8 @@ const styles = {
     margin: 5,
     boxShadow: '0px 1px 6px rgba(0, 0, 0, 0.12), 0px 1px 4px rgba(0, 0, 0, 0.24)',
     boxSizing: 'border-box',
-    borderRadius: 2
+    borderRadius: 2,
+    color: '#fff'
   }
 }
 
@@ -52,8 +29,7 @@ export class Cell extends Component {
     const {children, name, onPoll, value, width} = this.props
 
     const randomColors = {
-      color: colors.fullWhite,
-      background: `linear-gradient(22.5deg, ${colorConfig[this.state.colorItem].light} , ${colorConfig[this.state.colorItem].main})`
+      background: `linear-gradient(22.5deg, ${colorConfig[this.state.colorItem].light} , ${colorConfig[this.state.colorItem].dark})`
     }
 
     const childComponents = React.Children.map(children, (child) => {
