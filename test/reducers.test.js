@@ -11,7 +11,6 @@ describe('top level reducer', () => {
     describe('when the action type is POLL', () => {
 
       it('should return the state object with the POLL action keyed by action id', () => {
-
         const action = {
           type: 'POLL',
           id: 99,
@@ -32,7 +31,6 @@ describe('top level reducer', () => {
         }
 
         expect(reduction).to.deep.equal(expected)
-
       })
 
     })
@@ -40,7 +38,6 @@ describe('top level reducer', () => {
     describe('when the action type is RESIZE', () => {
 
       it('should return the state object with a width set', () => {
-
         const action = {
           type: 'RESIZE',
           width: 'lap'
@@ -53,7 +50,6 @@ describe('top level reducer', () => {
         }
 
         expect(reduction).to.deep.equal(expected)
-
       })
 
     })
@@ -67,7 +63,6 @@ describe('top level reducer', () => {
       describe('when an action with a new action id is passed in', () => {
 
         it('should return the state object with a new poll item', () => {
-
           const previouslySet = {
             1 : {
               res: {
@@ -112,7 +107,6 @@ describe('top level reducer', () => {
       describe('when an action with the same action id is passed in', () => {
 
         it('should return the state object with the state item amended', () => {
-
           const previouslySet = {
             1 : {
               res: {
@@ -151,7 +145,6 @@ describe('top level reducer', () => {
     describe('when the action type is RESIZE', () => {
 
       it('should return the state object with width amended if required', () => {
-
         const previouslySet = {
           1 : {
             res: {
