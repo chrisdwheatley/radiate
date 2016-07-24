@@ -1,7 +1,7 @@
 import * as colors from 'material-ui/lib/styles/colors'
 import Radium from 'radium'
 import React, {Component} from 'react'
-import {Compare} from './compare'
+import {default as Compare} from './compare'
 import {LastUpdated} from './last-updated'
 import fetch from './fetch'
 import {default as Title} from './title'
