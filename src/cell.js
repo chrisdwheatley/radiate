@@ -1,4 +1,4 @@
-import {colorConfig} from './colors'
+import {colorConfig} from '../dashboard/colors'
 import Radium from 'radium'
 import React, {Component} from 'react'
 import {Cell as GridLayoutCell} from 'glare'
@@ -23,7 +23,7 @@ export class Cell extends Component {
   componentWillMount () {
     this.setState({
       id: uniqueId('cell_'),
-      color: colorConfig[colorIndex]
+      automaticColor: colorConfig[colorIndex]
     })
 
     colorIndex++
@@ -34,10 +34,12 @@ export class Cell extends Component {
   }
 
   render () {
-    const {children, name, onPoll, value, width} = this.props
+    const {children, color, name, onPoll, value, width} = this.props
 
-    const randomColor = {
-      background: `linear-gradient(22.5deg, ${this.state.color.light} , ${this.state.color.dark})`
+    const chosenColor = color ? colorConfig.find(item => item.name === color) : this.state.automaticColor
+
+    const background = {
+      background: `linear-gradient(22.5deg, ${chosenColor.light} , ${chosenColor.dark})`
     }
 
     const childComponents = React.Children.map(children, (child) => {
@@ -52,7 +54,7 @@ export class Cell extends Component {
     return (
       <GridLayoutCell
         name={name}
-        style={Object.assign(styles.cell, randomColor)}>
+        style={Object.assign(styles.cell, background)}>
           {childComponents}
       </GridLayoutCell>
     )
