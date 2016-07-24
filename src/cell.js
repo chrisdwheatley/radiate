@@ -16,20 +16,28 @@ const styles = {
   }
 }
 
+let colorIndex = 0
+
 @Radium
 export class Cell extends Component {
   componentWillMount () {
     this.setState({
-      id: uniqueId('value_'),
-      colorItem: Math.floor(Math.random() * colorConfig.length)
+      id: uniqueId('cell_'),
+      color: colorConfig[colorIndex]
     })
+
+    colorIndex++
+
+    if (colorIndex === colorConfig.length) {
+      colorIndex = 0
+    }
   }
 
   render () {
     const {children, name, onPoll, value, width} = this.props
 
-    const randomColors = {
-      background: `linear-gradient(22.5deg, ${colorConfig[this.state.colorItem].light} , ${colorConfig[this.state.colorItem].dark})`
+    const randomColor = {
+      background: `linear-gradient(22.5deg, ${this.state.color.light} , ${this.state.color.dark})`
     }
 
     const childComponents = React.Children.map(children, (child) => {
@@ -44,7 +52,7 @@ export class Cell extends Component {
     return (
       <GridLayoutCell
         name={name}
-        style={Object.assign(styles.cell, randomColors)}>
+        style={Object.assign(styles.cell, randomColor)}>
           {childComponents}
       </GridLayoutCell>
     )
