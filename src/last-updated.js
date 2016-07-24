@@ -19,7 +19,7 @@ const LastUpdated = ({time}) => {
 }
 
 LastUpdated.propTypes = {
-  time: PropTypes.object.isRequired
+  time: PropTypes.number.isRequired
 }
 
 export default LastUpdated
