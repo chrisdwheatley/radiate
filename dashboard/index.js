@@ -13,13 +13,13 @@ export default class extends Component {
             </Text>
           </Cell>
           <Cell name='dayoftheweek'>
-            <Value title='Day of the week' file='daysoftheweek.json' prop={new Date().getDay()} freq={43200} />
+            <Value title='Day of the week' file='daysoftheweek.json' prop={new Date().getDay()} frequency={43200} />
           </Cell>
           <Cell name='shares'>
-            <Value title='Share Price' file='shareprice.json' prop='price' freq={10} prefix='$' compare last-updated/>
+            <Value title='Share Price' file='shareprice.json' prop='price' frequency={10} prefix='$' compare last-updated/>
           </Cell>
           <Cell name='stars'>
-            <Value title='GitHub Stars' api='https://api.github.com/repos/swirlycheetah/radiate' prop='stargazers_count' freq={300}/>
+            <Value title='GitHub Stars' api='https://api.github.com/repos/swirlycheetah/radiate' prop='stargazers_count' frequency={300}/>
           </Cell>
           <Cell name='md'>
             <Text title='Supports Markdown' file='text.md' />

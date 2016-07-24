@@ -1,4 +1,3 @@
-import * as colors from 'material-ui/lib/styles/colors'
 import Radium from 'radium'
 import React, {Component} from 'react'
 import {default as Compare} from './compare'
@@ -19,26 +18,26 @@ const styles = {
 @Radium
 export class Value extends Component {
   componentDidMount () {
-    const {api, id, file, freq, onPoll, prop} = this.props
+    const {api, id, file, frequency, onPoll, prop} = this.props
 
     if (file || api) {
       fetch(file, api).then(res => {
         onPoll(id, res[prop])
       })
-      if (freq) {
+      if (frequency) {
         // switch to setTimeout at some point
         setInterval(() => {
           fetch(file, api).then(res => {
             onPoll(id, res[prop])
           })
-        }, freq * 1000)
+        }, frequency * 1000)
       }
     }
 
   }
 
   render () {
-    const {compare, freq, id, prefix, title, value} = this.props
+    const {compare, frequency, id, prefix, title, value} = this.props
     const lastUpdated = this.props['last-updated']
 
     const val = value[id] ? value[id].res : 'fetching...'
