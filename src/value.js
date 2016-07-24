@@ -51,7 +51,7 @@ export class Value extends Component {
           {prefix}
           {val}
         </div>
-        {compare ? <Compare value={val} /> : null}
+        {compare ? <Compare value={parseInt(val, 10)} /> : null}
         {lastUpdated? <LastUpdated time={time} />: null}
       </div>
     )
