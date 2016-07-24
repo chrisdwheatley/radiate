@@ -33,11 +33,11 @@ export class Text extends Component {
 
     if (file) {
       fetch(file, null).then(res => {
-        this.setState({
+        this.state = {
           text: {
             __html: parse(res)
           }
-        })
+        }
       })
     }
 

@@ -20,11 +20,13 @@ let colorIndex = 0
 
 @Radium
 export class Cell extends Component {
-  componentWillMount () {
-    this.setState({
+  constructor(props) {
+    super(props)
+    
+    this.state = {
       id: uniqueId('cell_'),
       automaticColor: colorConfig[colorIndex]
-    })
+    }
 
     colorIndex++
 
