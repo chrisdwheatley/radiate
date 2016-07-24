@@ -1,5 +1,4 @@
-import Radium from 'radium'
-import React, {Component} from 'react'
+import React, {PropTypes} from 'react'
 import * as moment from 'moment'
 
 const styles = {
@@ -13,15 +12,14 @@ const styles = {
   }
 }
 
-@Radium
-export class LastUpdated extends Component {
-
-  render () {
-    const {time} = this.props
-    const formattedNow = moment.unix(time).format('MMM Do h:mm a')
-
-    return (
-      <div style={styles.wrapper}>Last Updated: {formattedNow}</div>
-    )
-  }
+const LastUpdated = ({time}) => {
+  return (
+    <div style={styles.wrapper}>Last Updated: {moment.unix(time).format('MMM Do h:mm a')}</div>
+  )
 }
+
+LastUpdated.propTypes = {
+  time: PropTypes.object.isRequired
+}
+
+export default LastUpdated
