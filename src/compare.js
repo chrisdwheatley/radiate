@@ -1,7 +1,6 @@
 import * as colors from 'material-ui/lib/styles/colors'
 import FontIcon from 'material-ui/lib/font-icon'
-import Radium from 'radium'
-import React, {Component} from 'react'
+import React, {PropTypes} from 'react'
 
 let prevValue
 
@@ -13,31 +12,28 @@ const styles = {
   }
 }
 
-@Radium
-export class Compare extends Component {
+const Compare = ({value}) => {
+  let arrow = <span style={styles.compareIcon}>-</span>
 
-  render () {
-    const {value} = this.props
-    let arrow = null
-
-    if (value > prevValue) {
-      arrow = <FontIcon style={styles.compareIcon} className='material-icons'>arrow_upward</FontIcon>
-    }
-
-    if (value < prevValue) {
-      arrow = <FontIcon style={styles.compareIcon} className='material-icons'>arrow_downward</FontIcon>
-    }
-
-    if (value === prevValue) {
-      arrow = <span style={styles.compareIcon}>-</span>
-    }
-
-    prevValue = value
-
-    return (
-      <div style={styles.compareIcon}>
-        {arrow}
-      </div>
-    )
+  if (value > prevValue) {
+    arrow = <FontIcon style={styles.compareIcon} className='material-icons'>arrow_upward</FontIcon>
   }
+
+  if (value < prevValue) {
+    arrow = <FontIcon style={styles.compareIcon} className='material-icons'>arrow_downward</FontIcon>
+  }
+
+  prevValue = value
+
+  return (
+    <div>
+      {arrow}
+    </div>
+  )
 }
+
+Compare.propTypes = {
+  value: PropTypes.number
+}
+
+export default Compare
