@@ -1,7 +1,5 @@
 import {parse} from 'markdown'
-import Radium from 'radium'
 import React, {Component} from 'react'
-import {findDOMNode} from 'react-dom'
 import fetch from './fetch'
 import {default as Title} from './title'
 
@@ -13,23 +11,17 @@ const styles = {
   }
 }
 
-@Radium
 export class Text extends Component {
-
   constructor(props) {
     super(props)
 
-    const {body} = this.props
+    const {body, file} = this.props
 
     this.state = {
       text: {
         __html: body
       }
     }
-  }
-
-  componentDidMount () {
-    const {file} = this.props
 
     if (file) {
       fetch(file, null).then(res => {
@@ -40,13 +32,12 @@ export class Text extends Component {
         }
       })
     }
-
   }
 
   render () {
     const {children, file, title} = this.props
     const {text} = this.state
-    const inlineText = children.props.children
+    const inlineText = children.props ? children.props.children : children
 
     return (
       <div>
