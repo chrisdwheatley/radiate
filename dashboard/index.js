@@ -7,7 +7,7 @@ export default class extends Component {
     return (
       <Dashboard>
         <Grid layout={layout}>
-          <Cell name='title' color='teal'>
+          <Cell name='title' color='deepPurple'>
             <Text title='Radiate'>
               A responsive dashboard written in React - built for all screen sizes
             </Text>

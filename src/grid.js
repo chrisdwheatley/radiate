@@ -19,15 +19,16 @@ export class Grid extends Component {
       })
     })
 
-    const rows = layout[value.width || 'palm'].length
-    const rowHeight = 100 / rows
+    const width = value.width || 'palm'
+    const rows = layout[width].length
+    const rowHeight = width === 'palm' ? '100% '.repeat(rows) : `${Math.floor(100 / rows) - .1}vh `.repeat(rows)
 
     return (
       <GridLayoutGrid
-        layout={layout[value.width || 'palm']}
+        layout={layout[width]}
         style={{
-          gridTemplateRows: `${Math.floor(rowHeight) - .1}vh `.repeat(rows),
-          fontSize: mediaQueries[value.width || 'palm'].fontSize
+          gridTemplateRows: rowHeight,
+          fontSize: mediaQueries[width].fontSize
         }}>
         {children}
       </GridLayoutGrid>
