@@ -27,7 +27,7 @@
     "enzyme": "^2.4.1",
     "glare": "^0.2.0",
     "isparta": "^4.0.0",
-    "lodash.uniqueid": "^4.0.0",
+    "lodash.uniqueid": "^4.0.1",
     "markdown": "^0.5.0",
     "material-ui": "^0.13.4",
     "mocha": "^2.5.3",
