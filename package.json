@@ -23,7 +23,7 @@
     "copy-webpack-plugin": "^0.2.0",
     "css-loader": "^0.21.0",
     "cz-conventional-changelog": "^1.1.6",
-    "d3": "^3.5.9",
+    "d3": "^4.2.0",
     "enzyme": "^2.4.1",
     "glare": "^0.2.0",
     "isparta": "^4.0.0",
