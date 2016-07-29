@@ -25,7 +25,7 @@ export function setupMqs(fn) {
 
     // display scrollbar if mobile size, otherwise hide it on larger screens
     if (mediaQueries.palm.size.matches) {
-      document.querySelector('body').style.overflow = 'scroll'
+      document.querySelector('body').style.overflow = 'auto'
     } else {
       document.querySelector('body').style.overflow = 'hidden'
     }
