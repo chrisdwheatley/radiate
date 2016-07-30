@@ -6,11 +6,11 @@ import {Text} from '../src/text'
 
 chai.use(chaiEnzyme())
 
-describe('<Text />', function() {
+describe('<Text />', () => {
 
-  describe('when there is text inlined within the text component', function() {
+  describe('when there is text inlined within the text component', () => {
 
-    it('should display the text', function() {
+    it('should display the text', () => {
       const text = render(<Text>foo</Text>)
 
       expect(text).to.contain.text('foo')

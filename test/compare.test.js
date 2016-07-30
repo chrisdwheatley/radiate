@@ -6,11 +6,11 @@ import {default as Compare} from '../src/compare'
 
 chai.use(chaiEnzyme())
 
-describe('<Compare />', function() {
+describe('<Compare />', () => {
 
-  describe('when a value is passed through to be compared for the first time', function() {
+  describe('when a value is passed through to be compared for the first time', () => {
 
-    it('should return a dash to denote that the value is not lower or higher', function() {
+    it('should return a dash to denote that the value is not lower or higher', () => {
       const compare = render(<Compare value={1} />)
 
       expect(compare).to.contain.text('-')
@@ -18,9 +18,9 @@ describe('<Compare />', function() {
 
   })
 
-  describe('when a larger value is passed through to be compared against a previous value', function() {
+  describe('when a larger value is passed through to be compared against a previous value', () => {
 
-    it('should display an arrow upwards to denote that the value is higer', function() {
+    it('should display an arrow upwards to denote that the value is higer', () => {
       const compare = render(<Compare value={3} />)
 
       expect(compare).to.contain.text('arrow_upward')
@@ -28,9 +28,9 @@ describe('<Compare />', function() {
 
   })
 
-  describe('when a smaller value is passed through to be compared against a previous value', function() {
+  describe('when a smaller value is passed through to be compared against a previous value', () => {
 
-    it('should display an arrow downwards to denote that the value is lower', function() {
+    it('should display an arrow downwards to denote that the value is lower', () => {
       const compare = render(<Compare value={2} />)
 
       expect(compare).to.contain.text('arrow_downward')
@@ -38,9 +38,9 @@ describe('<Compare />', function() {
 
   })
 
-  describe('when the same value is passed through to be compared against a previous value', function() {
+  describe('when the same value is passed through to be compared against a previous value', () => {
 
-    it('should display a dash to denote that the value hasn\'t changed', function() {
+    it('should display a dash to denote that the value hasn\'t changed', () => {
       const compare = render(<Compare value={2} />)
 
       expect(compare).to.contain.text('-')

@@ -6,11 +6,11 @@ import {default as Enable} from '../../src/experimental-features/enable'
 
 chai.use(chaiEnzyme())
 
-describe('<Enable />', function() {
+describe('<Enable />', () => {
 
-  describe('when the operating system is Android', function() {
+  describe('when the operating system is Android', () => {
 
-    it('should display a message warning users that their OS & browser combination is not supported', function() {
+    it('should display a message warning users that their OS & browser combination is not supported', () => {
       const enable = shallow(<Enable browser={'foo'} os={'Android'} />)
 
       expect(enable).to.contain.text(
@@ -20,9 +20,9 @@ describe('<Enable />', function() {
 
   })
 
-  describe('when the operating system is iOS', function() {
+  describe('when the operating system is iOS', () => {
 
-    it('should display a message warning users that their OS & browser combination is not supported', function() {
+    it('should display a message warning users that their OS & browser combination is not supported', () => {
       const enable = shallow(<Enable browser={'bar'} os={'iOS'} />)
 
       expect(enable).to.contain.text(
@@ -32,11 +32,11 @@ describe('<Enable />', function() {
 
   })
 
-  describe('when the operating system is not Android or iOS', function() {
+  describe('when the operating system is not Android or iOS', () => {
 
-    describe('when the browser is Chrome', function() {
+    describe('when the browser is Chrome', () => {
 
-      it('should display the information to enable CSS Grid Layout on Chrome', function() {
+      it('should display the information to enable CSS Grid Layout on Chrome', () => {
 
         const enable = shallow(<Enable browser={'Chrome'} os={'foo'} />)
 
@@ -48,9 +48,9 @@ describe('<Enable />', function() {
 
     })
 
-    describe('when the browser is Firefox', function() {
+    describe('when the browser is Firefox', () => {
 
-      it('should display the information to enable CSS Grid Layout on Firefox', function() {
+      it('should display the information to enable CSS Grid Layout on Firefox', () => {
 
         const enable = shallow(<Enable browser={'Firefox'} os={'bar'} />)
 

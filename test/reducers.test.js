@@ -4,13 +4,13 @@ import reducer from '../src/reducers'
 
 sinon.useFakeTimers()
 
-describe('top level reducer', function() {
+describe('top level reducer', () => {
 
-  describe('when no state is set', function() {
+  describe('when no state is set', () => {
 
-    describe('when the action type is POLL', function() {
+    describe('when the action type is POLL', () => {
 
-      it('should return the state object with the POLL action keyed by action id', function() {
+      it('should return the state object with the POLL action keyed by action id', () => {
         const action = {
           type: 'POLL',
           id: 99,
@@ -35,9 +35,9 @@ describe('top level reducer', function() {
 
     })
 
-    describe('when the action type is RESIZE', function() {
+    describe('when the action type is RESIZE', () => {
 
-      it('should return the state object with a width set', function() {
+      it('should return the state object with a width set', () => {
         const action = {
           type: 'RESIZE',
           width: 'lap'
@@ -56,13 +56,13 @@ describe('top level reducer', function() {
 
   })
 
-  describe('when there is already state set', function() {
+  describe('when there is already state set', () => {
 
-    describe('when the action type is POLL', function() {
+    describe('when the action type is POLL', () => {
 
-      describe('when an action with a new action id is passed in', function() {
+      describe('when an action with a new action id is passed in', () => {
 
-        it('should return the state object with a new poll item', function() {
+        it('should return the state object with a new poll item', () => {
           const previouslySet = {
             1 : {
               res: {
@@ -104,9 +104,9 @@ describe('top level reducer', function() {
 
       })
 
-      describe('when an action with the same action id is passed in', function() {
+      describe('when an action with the same action id is passed in', () => {
 
-        it('should return the state object with the state item amended', function() {
+        it('should return the state object with the state item amended', () => {
           const previouslySet = {
             1 : {
               res: {
@@ -142,9 +142,9 @@ describe('top level reducer', function() {
 
     })
 
-    describe('when the action type is RESIZE', function() {
+    describe('when the action type is RESIZE', () => {
 
-      it('should return the state object with width amended if required', function() {
+      it('should return the state object with width amended if required', () => {
         const previouslySet = {
           1 : {
             res: {

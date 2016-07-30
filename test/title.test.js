@@ -6,11 +6,11 @@ import {default as Title} from '../src/title'
 
 chai.use(chaiEnzyme())
 
-describe('<Title />', function() {
+describe('<Title />', () => {
 
-  describe('when the title value is passed through', function() {
+  describe('when the title value is passed through', () => {
 
-    it('should display the title text', function() {
+    it('should display the title text', () => {
       const title = shallow(<Title title='foo' />)
 
       expect(title).to.contain.text('foo')

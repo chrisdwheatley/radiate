@@ -6,11 +6,11 @@ import {default as VerionOverlay} from '../../src/versioning/version-overlay'
 
 chai.use(chaiEnzyme())
 
-describe('<VerionOverlay />', function() {
+describe('<VerionOverlay />', () => {
 
-  describe('when the current version number is passed through', function() {
+  describe('when the current version number is passed through', () => {
 
-    it('should display the current version', function() {
+    it('should display the current version', () => {
       const title = shallow(<VerionOverlay currentVersion='0.99.999' />)
 
       expect(title).to.contain.text('0.99.999')

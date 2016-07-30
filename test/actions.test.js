@@ -1,11 +1,11 @@
 import chai, {expect} from 'chai'
 import {poll, resize} from '../src/actions'
 
-describe('poll action', function() {
+describe('poll action', () => {
 
-  describe('when an id and response is passed into poll()', function() {
+  describe('when an id and response is passed into poll()', () => {
 
-    it('should return an object with the expected values', function() {
+    it('should return an object with the expected values', () => {
       const pollCall = poll(99, {data: 'foo'})
 
       const pollResponse = {
@@ -23,11 +23,11 @@ describe('poll action', function() {
 
 })
 
-describe('resize action', function() {
+describe('resize action', () => {
 
-  describe('when a width is passed into resize()', function() {
+  describe('when a width is passed into resize()', () => {
 
-    it('should return an object with the expected values', function() {
+    it('should return an object with the expected values', () => {
       const resizeCall = resize('palm')
 
       const resizeResponse = {
