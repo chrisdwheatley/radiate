@@ -35,7 +35,7 @@
     "react": "^15.0.1",
     "react-addons-test-utils": "^15.3.0",
     "react-d3": "^0.4.0",
-    "react-dom": "^15.0.1",
+    "react-dom": "^15.3.0",
     "react-flexr": "^2.0.2",
     "react-redux": "^4.4.1",
     "react-tap-event-plugin": "^1.0.0",
