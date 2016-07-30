@@ -1,4 +1,4 @@
-import * as colors from 'material-ui/lib/styles/colors'
+import * as colors from 'material-ui/styles/colors'
 import React, {PropTypes} from 'react'
 
 const styles = {

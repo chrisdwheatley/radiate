@@ -1,7 +1,7 @@
 import React from 'react'
 import chai, {expect} from 'chai'
 import chaiEnzyme from 'chai-enzyme'
-import {shallow, render} from 'enzyme'
+import {render} from 'enzyme'
 import {default as Compare} from '../src/compare'
 
 chai.use(chaiEnzyme())
@@ -11,7 +11,7 @@ describe('<Compare />', () => {
   describe('when a value is passed through to be compared for the first time', () => {
 
     it('should return a dash to denote that the value is not lower or higher', () => {
-      const compare = shallow(<Compare value={1} />)
+      const compare = render(<Compare value={1} />)
 
       expect(compare).to.contain.text('-')
     })

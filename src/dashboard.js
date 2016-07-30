@@ -1,4 +1,4 @@
-import * as colors from 'material-ui/lib/styles/colors'
+import * as colors from 'material-ui/styles/colors'
 import Radium from 'radium'
 import React, {Component} from 'react'
 import {connect} from 'react-redux'

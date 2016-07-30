@@ -1,5 +1,6 @@
-import * as colors from 'material-ui/lib/styles/colors'
-import FontIcon from 'material-ui/lib/font-icon'
+import * as colors from 'material-ui/styles/colors'
+import FontIcon from 'material-ui/FontIcon'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import React, {PropTypes} from 'react'
 
 let prevValue
@@ -23,17 +24,21 @@ const Compare = ({value}) => {
     arrow = <FontIcon style={styles.compareIcon} className='material-icons'>arrow_downward</FontIcon>
   }
 
+  console.log(value, prevValue);
+
   prevValue = value
 
   return (
-    <div>
-      {arrow}
-    </div>
+    <MuiThemeProvider>
+      <div>
+        {arrow}
+      </div>
+    </MuiThemeProvider>
   )
 }
 
 Compare.propTypes = {
-  value: PropTypes.number
+  value: PropTypes.string
 }
 
 export default Compare

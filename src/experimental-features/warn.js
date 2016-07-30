@@ -1,4 +1,4 @@
-import * as colors from 'material-ui/lib/styles/colors'
+import * as colors from 'material-ui/styles/colors'
 import Radium from 'radium'
 import React, {PropTypes} from 'react'
 import {UAParser} from 'ua-parser-js'

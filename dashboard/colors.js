@@ -1,4 +1,4 @@
-import * as colors from 'material-ui/lib/styles/colors'
+import * as colors from 'material-ui/styles/colors'
 
 export const colorConfig = [
   {
