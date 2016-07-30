@@ -24,8 +24,6 @@ const Compare = ({value}) => {
     arrow = <FontIcon style={styles.compareIcon} className='material-icons'>arrow_downward</FontIcon>
   }
 
-  console.log(value, prevValue);
-
   prevValue = value
 
   return (
