@@ -3,7 +3,7 @@ import FontIcon from 'material-ui/FontIcon'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import React, {PropTypes} from 'react'
 
-let prevValue
+const prevValue = {}
 
 const styles = {
   compareIcon: {
@@ -13,18 +13,18 @@ const styles = {
   }
 }
 
-const Compare = ({value}) => {
+const Compare = ({id, value}) => {
   let arrow = <span style={styles.compareIcon}>-</span>
 
-  if (value > prevValue) {
+  if (value > prevValue[id]) {
     arrow = <FontIcon style={styles.compareIcon} className='material-icons'>arrow_upward</FontIcon>
   }
 
-  if (value < prevValue) {
+  if (value < prevValue[id]) {
     arrow = <FontIcon style={styles.compareIcon} className='material-icons'>arrow_downward</FontIcon>
   }
 
-  prevValue = value
+  prevValue[id] = value
 
   return (
     <MuiThemeProvider>
@@ -36,7 +36,10 @@ const Compare = ({value}) => {
 }
 
 Compare.propTypes = {
-  value: PropTypes.string
+  value: PropTypes.oneOfType([
+          PropTypes.string,
+          PropTypes.number
+        ])
 }
 
 export default Compare

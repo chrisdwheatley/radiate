@@ -4,7 +4,7 @@ import React, {PropTypes} from 'react'
 const styles = {
   color: 'rgba(255, 255, 255, 0.70)',
   textAlign: 'center',
-  fontSize: '66.6%',
+  fontSize: '75%',
   fontWeight: 500,
   lineHeight: 1.2,
   letterSpacing: '-.02em'

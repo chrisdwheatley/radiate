@@ -1,19 +1,19 @@
 export const mediaQueries = {
   palm: {
     size: window.matchMedia('(max-width: 600px)'),
-    fontSize: '3.5vh'
+    fontSize: '3.5vmax'
   },
   lap: {
     size: window.matchMedia('(min-width: 601px) and (max-width: 959px)'),
-    fontSize: '4.5vh'
+    fontSize: '3.5vmin'
   },
   desk: {
     size: window.matchMedia('(min-width: 960px) and (max-width: 1279px)'),
-    fontSize: '5.5vh'
+    fontSize: '3.5vmin'
   },
   wall: {
     size: window.matchMedia('(min-width: 1280px)'),
-    fontSize: '6.5vh'
+    fontSize: '5.5vmin'
   }
 }
 

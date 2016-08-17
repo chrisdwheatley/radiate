@@ -37,7 +37,7 @@ export class Value extends Component {
   }
 
   render () {
-    const {compare, frequency, id, prefix, title, value} = this.props
+    const {compare, frequency, id, prefix, suffix, title, value} = this.props
     const lastUpdated = this.props['last-updated']
 
     const val = value[id] ? value[id].res : 'fetching...'
@@ -49,8 +49,9 @@ export class Value extends Component {
         <div style={styles.body}>
           {prefix}
           {val}
+          {suffix}
         </div>
-        {compare ? <Compare value={val} /> : null}
+        {compare ? <Compare value={val} id={id} /> : null}
         {lastUpdated? <LastUpdated time={time} />: null}
       </div>
     )
