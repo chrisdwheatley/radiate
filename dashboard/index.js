@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {layout} from './layout'
-import {Cell, Dashboard, Graph, Image, Grid, Text, Value} from '../src'
+import {Cell, Dashboard, Grid, Text, Value} from '../src'
 
 export default class extends Component {
   render () {
@@ -9,20 +9,30 @@ export default class extends Component {
         <Grid layout={layout}>
           <Cell name='title'>
             <Text title='Radiate'>
-              A responsive dashboard written in React - built for all screen sizes
+              Radiate is a responsive dashboard written in React - built for all screen sizes
             </Text>
           </Cell>
-          <Cell name='dayoftheweek'>
-            <Value title='Day of the week' file='daysoftheweek.json' prop={new Date().getDay()} frequency={43200} />
+          <Cell name='remote-data'>
+            <Value title='Data can be fetched, compared & updated from eternal sources, for example Radiate has the following number of GitHub stars' api='https://api.github.com/repos/swirlycheetah/radiate' prop='stargazers_count' frequency={60} />
           </Cell>
-          <Cell name='shares'>
-            <Value title='Share Price' file='shareprice.json' prop='price' frequency={10} prefix='$' compare last-updated/>
+          <Cell name='local-data'>
+            <Value title='Data can be fetched from JSON stored locally, you can then write to it however you like, for example;' file='analytics.json' prop='uniques' frequency={10} suffix=' unique users today' compare last-updated/>
           </Cell>
-          <Cell name='stars'>
-            <Value title='GitHub Stars' api='https://api.github.com/repos/swirlycheetah/radiate' prop='stargazers_count' frequency={300}/>
+          <Cell name='getting-started'>
+            <Text title='Here are some useful links to help you get started' file='links.md' />
           </Cell>
-          <Cell name='md'>
-            <Text title='Supports Markdown' file='text.md' />
+          <Cell name='layout'>
+            <Text title='Customizable Layout & Colors'>
+              Radiate uses CSS Grid Layout to handle any layout imaginable, layouts can be set per breakpoint and colors can be customized.
+            </Text>
+          </Cell>
+          <Cell name='layout'>
+            <Text title='Customizable Layout & Colors'>
+              Radiate uses CSS Grid Layout to handle any layout imaginable, layouts can be set per breakpoint and colors can be customized.
+            </Text>
+          </Cell>
+          <Cell name='roadmap'>
+            <Text title='The roadmap includes;' file="roadmap.md"/>
           </Cell>
         </Grid>
       </Dashboard>

@@ -1,20 +1,22 @@
 export const layout = {
   palm: [
     'title',
-    'dayoftheweek',
-    'shares',
-    'stars',
-    'md'
+    'remote-data',
+    'local-data',
+    'getting-started',
+    'layout',
+    'roadmap'
   ],
   lap: [
-    'title title',
-    'dayoftheweek shares',
-    'dayoftheweek md',
-    'stars md'
+    'title local-data',
+    'remote-data layout',
+    'getting-started layout',
+    'roadmap roadmap'
   ],
   desk: [
-    'title title dayoftheweek',
-    'shares stars dayoftheweek',
-    'md md md',
+    'title title local-data',
+    'remote-data remote-data local-data',
+    'getting-started layout layout',
+    'getting-started roadmap roadmap'
   ]
 }
