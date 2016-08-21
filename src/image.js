@@ -14,7 +14,7 @@ export class Image extends Component {
   render () {
     const {file, source, src} = this.props
 
-    const image = file ? `build/${file}` : src || source
+    const image = file ? `/${file}` : src || source
 
     return (
       <img src={image} style={styles.image} />

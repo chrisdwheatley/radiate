@@ -1,17 +1,20 @@
-var CopyWebpackPlugin = require('copy-webpack-plugin')
-var path = require('path')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, 'build'),
-    publicPath: '/build/',
+    publicPath: '/',
     filename: 'bundle.js'
   },
   module: {
     loaders: [{
       test: /\.js?$/,
-      loaders: ['babel-loader'],
+      loaders: [
+        'babel-loader'
+      ],
       exclude: /node_modules/
     },
     {
@@ -20,6 +23,7 @@ module.exports = {
     }]
   },
   plugins: [
+    new webpack.optimize.OccurenceOrderPlugin(),
     new CopyWebpackPlugin([{
       from: 'dashboard/assets'
     }])
