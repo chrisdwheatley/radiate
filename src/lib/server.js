@@ -5,7 +5,7 @@ const fs = require('fs')
 const path = require('path')
 
 const app = express()
-const staticsPath = __dirname + '/../build/'
+const staticsPath = __dirname + '/../../build/'
 const authCode = process.env.AUTH
 const port = process.env.PORT || 3000
 
