@@ -21,7 +21,7 @@ const errorMessages = {
 if (process.env.NODE_ENV !== 'production') {
   const webpackDevMiddleware = require("webpack-dev-middleware")
   const webpack = require("webpack")
-  const config = require('../webpack.config')
+  const config = require('../../webpack.config')
   const compiler = webpack(config)
 
   app.use(webpackDevMiddleware(compiler, {
@@ -42,7 +42,7 @@ if (!authCode) {
 app.use(express.static(path.join(staticsPath)))
 
 app.get('/', (req, res) => {
-  res.status(200).sendFile(path.join(__dirname + '/../index.html'))
+  res.status(200).sendFile(path.join(__dirname + '/../../index.html'))
 })
 
 app.post('/data/:filename', (req, res) => {
@@ -83,6 +83,8 @@ app.post('/data/:filename', (req, res) => {
   })
 })
 
-app.listen(port, () => {
+const server = app.listen(port, () => {
   console.log(chalk.green(`Radiate listening on port ${port}.`))
 })
+
+module.exports = server
