@@ -59,10 +59,10 @@ const Warn = () => {
       <div style={styles.cell}>
         <Title title='Links' />
         <div style={styles.copy}>
-          <a style={styles.link} href="https://github.com/swirlycheetah/radiate">GitHub Repository</a>
+          <a style={styles.link} href="https://github.com/chrisdwheatley/radiate">GitHub Repository</a>
         </div>
         <div style={styles.copy}>
-          <a style={styles.link} href="https://github.com/swirlycheetah/radiate/issues">Raise an issues</a>
+          <a style={styles.link} href="https://github.com/chrisdwheatley/radiate/issues">Raise an issues</a>
         </div>
       </div>
     </div>

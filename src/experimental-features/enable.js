@@ -18,7 +18,7 @@ const styles = {
 const Enable = ({browser, os}) => {
   let instructions =
       <div>
-        It doesn&#39;t look like your current browser ({browser}) and OS ({os}) combination supports CSS Grid Layout. Please try Chrome, Firefox or Opera on desktop. If you think that&#39;s incorrect, please raise an <a style={styles.link}  href="https://github.com/swirlycheetah/radiate/issues/new">issue</a> noting which browser & OS you&#39;re using.
+        It doesn&#39;t look like your current browser ({browser}) and OS ({os}) combination supports CSS Grid Layout. Please try Chrome, Firefox or Opera on desktop. If you think that&#39;s incorrect, please raise an <a style={styles.link}  href="https://github.com/chrisdwheatley/radiate/issues/new">issue</a> noting which browser & OS you&#39;re using.
       </div>
 
   if (os !== 'Android' || os !== 'iOS') {

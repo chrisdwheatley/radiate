@@ -7,7 +7,7 @@ A responsive dashboard written in React - built for all screen sizes.
 Clone the repository and `cd` into it.
 
 ```
-git clone git@github.com:swirlycheetah/radiate.git && cd radiate
+git clone git@github.com:chrisdwheatley/radiate.git && cd radiate
 ```
 
 Install the project dependencies.

@@ -20,7 +20,7 @@ const VersionOverlay = ({currentVersion}) => <div style={styles.overlay}>{curren
  * currently we only grab the current version which is hard coded
  * in `./src/dashboard.js`, eventually we'll need to also fetch the latest
  * version from
- * https://raw.githubusercontent.com/swirlycheetah/radiate/master/package.json
+ * https://raw.githubusercontent.com/chrisdwheatley/radiate/master/package.json
  * and compare the two
  *
  * if the current version is older than the one in master then we can pop up
