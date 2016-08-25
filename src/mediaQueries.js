@@ -13,7 +13,7 @@ export const mediaQueries = {
   },
   wall: {
     size: window.matchMedia('(min-width: 1280px)'),
-    fontSize: '5.5vmin'
+    fontSize: '4vmin'
   }
 }
 

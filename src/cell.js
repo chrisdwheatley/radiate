@@ -3,7 +3,6 @@ import Radium from 'radium'
 import React, {Component} from 'react'
 import {Cell as GridLayoutCell} from 'glare'
 import uniqueId from 'lodash.uniqueid'
-import {SIZES} from './sizes'
 
 const styles = {
   cell: {
@@ -22,7 +21,7 @@ let colorIndex = 0
 export class Cell extends Component {
   constructor(props) {
     super(props)
-    
+
     this.state = {
       id: uniqueId('cell_'),
       automaticColor: colorConfig[colorIndex]

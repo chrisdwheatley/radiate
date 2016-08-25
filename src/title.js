@@ -13,7 +13,7 @@ const styles = {
 const Title = ({title}) => <div style={styles}>{title}</div>
 
 Title.propTypes = {
-  title: PropTypes.string.isRequired
+  title: PropTypes.string
 }
 
 export default Title

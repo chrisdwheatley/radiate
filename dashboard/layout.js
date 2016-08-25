@@ -18,5 +18,11 @@ export const layout = {
     'remote-data remote-data local-data',
     'getting-started layout layout',
     'getting-started roadmap roadmap'
+  ],
+  wall: [
+    'title title local-data',
+    'remote-data remote-data local-data',
+    'getting-started layout layout',
+    'getting-started roadmap roadmap'
   ]
 }

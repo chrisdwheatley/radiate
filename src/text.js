@@ -23,7 +23,7 @@ class Text extends Component {
 
     const {children, file} = this.props
 
-    if (children.props.children) {
+    if (children.props && children.props.children) {
       this.state = {
         text: {
           __html: children.props.children

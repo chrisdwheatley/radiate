@@ -26,11 +26,6 @@ export default class extends Component {
               Radiate uses CSS Grid Layout to handle any layout imaginable, layouts can be set per breakpoint and colors can be customized.
             </Text>
           </Cell>
-          <Cell name='layout'>
-            <Text title='Customizable Layout & Colors'>
-              Radiate uses CSS Grid Layout to handle any layout imaginable, layouts can be set per breakpoint and colors can be customized.
-            </Text>
-          </Cell>
           <Cell name='roadmap'>
             <Text title='The roadmap includes;' file="roadmap.md"/>
           </Cell>
