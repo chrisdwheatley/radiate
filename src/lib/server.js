@@ -11,10 +11,10 @@ const port = process.env.PORT || 3000
 
 const errorMessages = {
   noAuth: {
-    warning: 'WARNING: You haven\'t set an authorisation code, this means anyone could post data to your server.',
-    error: 'Authorisation code not present, please add \'?auth=<your-auth-code-here>\' to the end of your url.'
+    warning: 'WARNING: You haven\'t set an authorization code, this means anyone could post data to your server.',
+    error: 'Authorization code not present, please add \'?auth=<your-auth-code-here>\' to the end of your url.'
   },
-  incorrectAuth: 'Incorrect authorisation code supplied.',
+  incorrectAuth: 'Incorrect authorization code supplied.',
   jsonParse: 'Failed to parse your JSON input, please check the format.'
 }
 
