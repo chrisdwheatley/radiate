@@ -7,6 +7,8 @@ A responsive dashboard written in React - built for all screen sizes.
 ## Table of Contents
 
   1. [Getting Started](#getting-started)
+    1. [Server](#server)
+    1. [Browser](#browser)
   1. [Customizing Radiate](#customizing-radiate)
     1. [Layout](#layout)
     1. [Colors](#colors)
@@ -18,6 +20,8 @@ A responsive dashboard written in React - built for all screen sizes.
   1. [License](#license)
 
 ## Getting Started
+
+#### Server
 
 Because you'll be amending the example and creating your own instance of Radiate  you may want to fork this repository to be able to push updates.
 
@@ -56,6 +60,8 @@ You can also customize the port that Radiate runs on with an environment variabl
 ```
 PORT=8080 npm start
 ```
+
+#### Browser
 
 ## Customizing Radiate
 
