@@ -29,14 +29,20 @@ A responsive dashboard written in React - built for all screen sizes.
 
 Because you'll be amending the example and creating your own instance of Radiate  you may want to fork this repository to be able to push updates.
 
-Clone the repository and `cd` into it.
+Clone the repository.
 
 ```
-git clone git@github.com:<your-github-username>/radiate.git && cd radiate
+git clone git@github.com:<your-github-username>/radiate.git
 
 or
 
-git clone git@github.com:chrisdwheatley/radiate.git && cd radiate
+git clone git@github.com:chrisdwheatley/radiate.git
+```
+
+`cd` into the directory.
+
+```
+cd radiate
 ```
 
 Install the project dependencies.
