@@ -37,7 +37,7 @@ class Dashboard extends Component {
     })
 
     return (
-      <div style={Object.assign(styles.dashboard, {background: dark ? 'black' : 'white'})}>
+      <div style={Object.assign(styles.dashboard, {background: dark ? '#1f1f1f' : 'white'})}>
         {childComponents}
         <VersionOverlay currentVersion='0.1.0'/>
       </div>
