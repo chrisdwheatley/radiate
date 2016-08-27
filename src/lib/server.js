@@ -1,6 +1,7 @@
 const chalk = require('chalk')
 const compression = require('compression')
 const express = require('express')
+const favicon = require('serve-favicon')
 const fs = require('fs')
 const path = require('path')
 
@@ -33,6 +34,7 @@ if (process.env.NODE_ENV !== 'production') {
   }))
 }
 
+app.use(favicon(__dirname + '/../../favicon.ico'))
 app.use(compression())
 
 if (!authCode) {
