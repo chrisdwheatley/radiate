@@ -2,8 +2,6 @@
 
 A responsive dashboard written in React - built for all screen sizes.
 
-![Radiate - A responsive dashboard written in React - built for all screen sizes.](/docs/assets/radiate-example-desk.png)
-
 [![An example of Radiate at desktop size][radiate-example-desk]][image-fullsize-link]
 
 ## Table of Contents
