@@ -14,8 +14,7 @@ const styles = {
     borderRadius: 2,
     color: colors.fullWhite,
     fontFamily: 'Roboto, sans-serif',
-    fontSize: 28,
-    background: `linear-gradient(22.5deg, rgba(103, 58, 183, .75), ${colors.deepPurple500})`,
+    fontSize: 24,
     fontWeight: 700,
     lineHeight: 1.2
   },
@@ -24,6 +23,15 @@ const styles = {
   },
   link: {
     color: colors.fullWhite
+  },
+  purple: {
+    background: `linear-gradient(22.5deg, rgba(103, 58, 183, .75), ${colors.deepPurple500})`
+  },
+  blue: {
+    background: `linear-gradient(22.5deg, rgba(33, 150, 243, .75), ${colors.blue500})`
+  },
+  green: {
+    background: `linear-gradient(22.5deg, rgba(76, 175, 80, .75), ${colors.green500})`
   }
 }
 
@@ -35,13 +43,13 @@ const os = userAgent.getOS().name
 const Warn = () => {
   return (
     <div>
-      <div style={styles.cell}>
+      <div style={[styles.cell, styles.purple]}>
         <Title title='Radiate' />
         <div style={styles.copy}>
           Radiate is a responsive dashboard written in React - built for all screen sizes
         </div>
       </div>
-      <div style={styles.cell}>
+      <div style={[styles.cell, styles.blue]}>
         <Title title='Enabling CSS Grid Layout' />
         <div style={styles.copy}>
           Radiate relies on <a style={styles.link} href='https://www.w3.org/TR/css-grid-1/'>CSS Grid Layout</a>, which is an experimental feature available in some browsers.
@@ -55,12 +63,11 @@ const Warn = () => {
           For further details on browser support take a look at <a style={styles.link} href='http://caniuse.com/#feat=css-grid'>Can I Use</a>.
         </div>
       </div>
-      <div style={styles.cell}>
+      <div style={[styles.cell, styles.green]}>
         <Title title='Links' />
         <div style={styles.copy}>
           <a style={styles.link} href='https://github.com/chrisdwheatley/radiate'>GitHub Repository</a>
-        </div>
-        <div style={styles.copy}>
+          <br />
           <a style={styles.link} href='https://github.com/chrisdwheatley/radiate/issues'>Raise an issues</a>
         </div>
       </div>

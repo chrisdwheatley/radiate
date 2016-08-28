@@ -8,7 +8,7 @@ const styles = {
     fontWeight: 700
   },
   ul: {
-    margin: 20
+    fontSize: 20
   },
   li: {
     margin: 10
