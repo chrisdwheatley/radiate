@@ -5,24 +5,24 @@ export const layout = {
     'local-data',
     'getting-started',
     'layout',
-    'roadmap'
+    'upcoming'
   ],
   lap: [
     'title local-data',
     'remote-data layout',
     'getting-started layout',
-    'roadmap roadmap'
+    'upcoming upcoming'
   ],
   desk: [
     'title title local-data',
     'remote-data remote-data local-data',
     'getting-started layout layout',
-    'getting-started roadmap roadmap'
+    'getting-started upcoming upcoming'
   ],
   wall: [
     'title title local-data',
     'remote-data remote-data local-data',
     'getting-started layout layout',
-    'getting-started roadmap roadmap'
+    'getting-started upcoming upcoming'
   ]
 }

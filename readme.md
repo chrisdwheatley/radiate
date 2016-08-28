@@ -2,7 +2,9 @@
 
 A responsive dashboard written in React - built for all screen sizes.
 
-![Radiate - A responsive dashboard written in React - built for all screen sizes.](/docs/assets/radiate-example-wall.png)
+![Radiate - A responsive dashboard written in React - built for all screen sizes.](/docs/assets/radiate-example-desk.png)
+
+[![An example of Radiate at desktop size][radiate-example-desk]][image-fullsize-link]
 
 ## Table of Contents
 
@@ -27,9 +29,9 @@ A responsive dashboard written in React - built for all screen sizes.
 
 #### Server
 
-Because you'll be amending the example and creating your own instance of Radiate  you may want to fork this repository to be able to push updates.
+Because you'll be amending the example and creating your own instance of Radiate  you may want to fork this repository to be able to push updates to your own repository.
 
-Clone the repository.
+First clone the repository.
 
 ```
 git clone git@github.com:<your-github-username>/radiate.git
@@ -78,7 +80,7 @@ PORT=8080 npm start
 Radiate uses [CSS Grid Layout](http://gridbyexample.com/examples/) to help you create any layout imaginable.
 
 Unfortunately CSS Grid Layout isn't fully supported in any browser yet, however in Chrome, Opera & Firefox on desktop you can enable support by toggling a flag.
-Once you have Radiate up and running navigate to [localhost:3000](http://localhost:3000) and you'll see instructions on how to enable CSS Grid Layout.
+Once you have Radiate up and running navigate to [localhost:3000](http://localhost:3000) and you'll see instructions on how to enable CSS Grid Layout in your current browser.
 
 ## Customizing Radiate
 
@@ -219,3 +221,6 @@ Radiate should be quick and easy to deploy to any targets which support Node.js.
 ## License
 
 Released under the MIT license: [opensource.org/licenses/MIT](http://opensource.org/licenses/MIT)
+
+[image-fullsize-link]: https://raw.githubusercontent.com/chrisdwheatley/radiate/master/docs/assets/radiate-example-desk.png
+[radiate-example-desk]: /docs/assets/radiate-example-desk.png
