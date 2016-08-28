@@ -2,7 +2,13 @@
   "name": "radiate",
   "version": "0.1.0",
   "description": "A responsive dashboard written in React - built for all screen sizes",
-  "main": "index.js",
+  "author": "Chris Wheatley <chriswheatley87@gmail.com>",
+  "license": "MIT",
+  "main": "src/lib/server.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/chrisdwheatley/radiate.git"
+  },
   "scripts": {
     "coverage": "babel-node node_modules/isparta/bin/isparta cover node_modules/mocha/bin/_mocha -- --recursive",
     "lint": "standard",
@@ -15,8 +21,24 @@
       "test"
     ]
   },
-  "author": "Chris Wheatley <chriswheatley87@gmail.com>",
-  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "keywords": [
+    "radiate",
+    "dashboard",
+    "css grid layout",
+    "grid dashboard",
+    "information radiator",
+    "wall dash",
+    "wall dashboard",
+    "wall display"
+  ],
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-enzyme": "^0.5.0",
@@ -27,14 +49,6 @@
     "sinon": "^1.17.5",
     "supertest": "^2.0.0",
     "webpack-dev-middleware": "^1.6.1"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
-  "engines": {
-    "node": ">= 6.0.0"
   },
   "dependencies": {
     "babel-cli": "^6.9.0",
