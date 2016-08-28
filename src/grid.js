@@ -3,7 +3,7 @@ import {Grid as GridLayoutGrid} from 'glare'
 import {mediaQueries, setupMqs} from './mediaQueries'
 
 export class Grid extends Component {
-  componentDidMount() {
+  componentDidMount () {
     const {onResize} = this.props
 
     setupMqs(onResize)
@@ -21,7 +21,7 @@ export class Grid extends Component {
 
     const width = value.width || 'palm'
     const rows = layout[width].length
-    const rowHeight = width === 'palm' ? '100% '.repeat(rows) : `${Math.floor(100 / rows) - .1}vh `.repeat(rows)
+    const rowHeight = width === 'palm' ? '100% '.repeat(rows) : `${Math.floor(100 / rows) - 0.1}vh `.repeat(rows)
 
     return (
       <GridLayoutGrid

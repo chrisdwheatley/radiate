@@ -22,7 +22,7 @@ function mapStateToProps (state) {
 class Dashboard extends Component {
 
   render () {
-    const {children, dark, dispatch, light, value} = this.props
+    const {children, dark, dispatch, value} = this.props
 
     const childComponents = React.Children.map(children, (child) => {
       return React.cloneElement(child, {
@@ -39,7 +39,7 @@ class Dashboard extends Component {
     return (
       <div style={Object.assign(styles.dashboard, {background: dark ? '#1f1f1f' : 'white'})}>
         {childComponents}
-        <VersionOverlay currentVersion='0.1.0'/>
+        <VersionOverlay currentVersion='0.1.0' />
       </div>
     )
   }

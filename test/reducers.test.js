@@ -22,7 +22,7 @@ describe('top level reducer', () => {
         const reduction = reducer({}, action)
 
         const expected = {
-          99 : {
+          99: {
             res: {
               data: 'foo'
             },
@@ -64,7 +64,7 @@ describe('top level reducer', () => {
 
         it('should return the state object with a new poll item', () => {
           const previouslySet = {
-            1 : {
+            1: {
               res: {
                 data: 'bar'
               },
@@ -84,13 +84,13 @@ describe('top level reducer', () => {
           const reduction = reducer(previouslySet, action)
 
           const expected = {
-            1 : {
+            1: {
               res: {
                 data: 'bar'
               },
               time: 0
             },
-            99 : {
+            99: {
               res: {
                 data: 'foo'
               },
@@ -108,7 +108,7 @@ describe('top level reducer', () => {
 
         it('should return the state object with the state item amended', () => {
           const previouslySet = {
-            1 : {
+            1: {
               res: {
                 data: 'bar'
               },
@@ -127,7 +127,7 @@ describe('top level reducer', () => {
           const reduction = reducer(previouslySet, action)
 
           const expected = {
-            1 : {
+            1: {
               res: {
                 data: 'foo'
               },
@@ -146,7 +146,7 @@ describe('top level reducer', () => {
 
       it('should return the state object with width amended if required', () => {
         const previouslySet = {
-          1 : {
+          1: {
             res: {
               data: 'bar'
             },
@@ -163,7 +163,7 @@ describe('top level reducer', () => {
         const reduction = reducer(previouslySet, action)
 
         const expected = {
-          1 : {
+          1: {
             res: {
               data: 'bar'
             },

@@ -1,4 +1,3 @@
-import Radium from 'radium'
 import React, {Component} from 'react'
 import {default as Compare} from './compare'
 import {default as LastUpdated} from './last-updated'
@@ -15,7 +14,6 @@ const styles = {
   }
 }
 
-@Radium
 export class Value extends Component {
   componentDidMount () {
     const {api, id, file, frequency, onPoll, prop} = this.props
@@ -33,11 +31,10 @@ export class Value extends Component {
         }, frequency * 1000)
       }
     }
-
   }
 
   render () {
-    const {compare, frequency, id, prefix, suffix, title, value} = this.props
+    const {compare, id, prefix, suffix, title, value} = this.props
     const lastUpdated = this.props['last-updated']
 
     const val = value[id] ? value[id].res : 'fetching...'
@@ -52,7 +49,7 @@ export class Value extends Component {
           {suffix}
         </div>
         {compare ? <Compare value={val} id={id} /> : null}
-        {lastUpdated? <LastUpdated time={time} />: null}
+        {lastUpdated ? <LastUpdated time={time} /> : null}
       </div>
     )
   }

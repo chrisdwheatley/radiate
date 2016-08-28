@@ -1,4 +1,4 @@
-export function poll(id, res) {
+export function poll (id, res) {
   return {
     type: 'POLL',
     id,

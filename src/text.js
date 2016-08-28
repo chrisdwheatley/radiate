@@ -8,7 +8,7 @@ const styles = {
   body: {
     padding: '1vw',
     fontWeight: 700,
-    lineHeight: 1.2,
+    lineHeight: 1.2
   },
   links: {
     a: {
@@ -18,7 +18,7 @@ const styles = {
 }
 
 class Text extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     const {children, file} = this.props
@@ -43,7 +43,7 @@ class Text extends Component {
   }
 
   render () {
-    const {children, file, title} = this.props
+    const {title} = this.props
     const {text} = this.state
 
     return (
@@ -51,7 +51,7 @@ class Text extends Component {
         <Style rules={styles.links} />
         <Title title={title} />
         <div style={styles.body}>
-          <div dangerouslySetInnerHTML={text}></div>
+          <div dangerouslySetInnerHTML={text} />
         </div>
       </div>
     )

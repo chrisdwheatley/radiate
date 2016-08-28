@@ -17,8 +17,8 @@ export const mediaQueries = {
   }
 }
 
-export function setupMqs(fn) {
-  function mediaqueryresponse(key, action) {
+export function setupMqs (fn) {
+  function mediaqueryresponse (key, action) {
     if (mediaQueries[key].size.matches) {
       action(key)
     }
@@ -31,7 +31,7 @@ export function setupMqs(fn) {
     }
   }
 
-  Object.keys(mediaQueries).forEach(function(key) {
+  Object.keys(mediaQueries).forEach(function (key) {
     mediaqueryresponse(key, fn)
     // need to debounce listener
     mediaQueries[key].size.addListener(mediaqueryresponse.bind(null, key, fn))

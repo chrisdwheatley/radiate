@@ -1,6 +1,6 @@
 import * as colors from 'material-ui/styles/colors'
 import Radium from 'radium'
-import React, {PropTypes} from 'react'
+import React from 'react'
 import {UAParser} from 'ua-parser-js'
 import {default as Enable} from './enable'
 import {default as Title} from '../title'
@@ -15,10 +15,9 @@ const styles = {
     color: colors.fullWhite,
     fontFamily: 'Roboto, sans-serif',
     fontSize: 28,
-    color: colors.fullWhite,
     background: `linear-gradient(22.5deg, rgba(103, 58, 183, .75), ${colors.deepPurple500})`,
     fontWeight: 700,
-    lineHeight: 1.2,
+    lineHeight: 1.2
   },
   copy: {
     margin: 20
@@ -45,7 +44,7 @@ const Warn = () => {
       <div style={styles.cell}>
         <Title title='Enabling CSS Grid Layout' />
         <div style={styles.copy}>
-          Radiate relies on <a style={styles.link} href="https://www.w3.org/TR/css-grid-1/">CSS Grid Layout</a>, which is an experimental feature available in some browsers.
+          Radiate relies on <a style={styles.link} href='https://www.w3.org/TR/css-grid-1/'>CSS Grid Layout</a>, which is an experimental feature available in some browsers.
         </div>
 
         <div style={styles.copy}>
@@ -53,16 +52,16 @@ const Warn = () => {
         </div>
 
         <div style={styles.copy}>
-          For further details on browser support take a look at <a style={styles.link} href="http://caniuse.com/#feat=css-grid">Can I Use</a>.
+          For further details on browser support take a look at <a style={styles.link} href='http://caniuse.com/#feat=css-grid'>Can I Use</a>.
         </div>
       </div>
       <div style={styles.cell}>
         <Title title='Links' />
         <div style={styles.copy}>
-          <a style={styles.link} href="https://github.com/chrisdwheatley/radiate">GitHub Repository</a>
+          <a style={styles.link} href='https://github.com/chrisdwheatley/radiate'>GitHub Repository</a>
         </div>
         <div style={styles.copy}>
-          <a style={styles.link} href="https://github.com/chrisdwheatley/radiate/issues">Raise an issues</a>
+          <a style={styles.link} href='https://github.com/chrisdwheatley/radiate/issues'>Raise an issues</a>
         </div>
       </div>
     </div>

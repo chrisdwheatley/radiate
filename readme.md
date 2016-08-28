@@ -100,8 +100,7 @@ There are three top level components, they are;
 
 ```js
 <Dashboard
-  light // dashboard theme (default)
-  dark  // dashboard theme alternative
+  dark  // alternative dashboard theme
 />
 ```
 

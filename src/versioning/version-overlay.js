@@ -1,5 +1,4 @@
-import * as colors from 'material-ui/styles/colors'
-import React, {PropTypes} from 'react'
+import React from 'react'
 
 const styles = {
   overlay: {

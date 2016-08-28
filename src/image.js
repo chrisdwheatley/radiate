@@ -1,4 +1,3 @@
-import Radium from 'radium'
 import React, {Component} from 'react'
 
 const styles = {
@@ -8,7 +7,6 @@ const styles = {
   }
 }
 
-@Radium
 export class Image extends Component {
 
   render () {

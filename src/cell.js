@@ -1,5 +1,4 @@
 import {colorConfig} from '../dashboard/colors'
-import Radium from 'radium'
 import React, {Component} from 'react'
 import {Cell as GridLayoutCell} from 'glare'
 import uniqueId from 'lodash.uniqueid'
@@ -17,9 +16,8 @@ const styles = {
 
 let colorIndex = 0
 
-@Radium
 export class Cell extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
 
     this.state = {
@@ -35,7 +33,7 @@ export class Cell extends Component {
   }
 
   render () {
-    const {children, color, name, onPoll, value, width} = this.props
+    const {children, color, name, onPoll, value} = this.props
 
     const chosenColor = color ? colorConfig.find(item => item.name === color) : this.state.automaticColor
 

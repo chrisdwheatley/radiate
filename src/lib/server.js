@@ -6,7 +6,7 @@ const fs = require('fs')
 const path = require('path')
 
 const app = express()
-const staticsPath = __dirname + '/../../build/'
+const staticsPath = path.join(__dirname, '/../../build/')
 const authCode = process.env.AUTH
 const port = process.env.PORT || 3000
 
@@ -20,8 +20,8 @@ const errorMessages = {
 }
 
 if (process.env.NODE_ENV !== 'production') {
-  const webpackDevMiddleware = require("webpack-dev-middleware")
-  const webpack = require("webpack")
+  const webpackDevMiddleware = require('webpack-dev-middleware')
+  const webpack = require('webpack')
   const config = require('../../webpack.config')
   const compiler = webpack(config)
 
@@ -34,7 +34,7 @@ if (process.env.NODE_ENV !== 'production') {
   }))
 }
 
-app.use(favicon(__dirname + '/../../favicon.ico'))
+app.use(favicon(path.join(__dirname, '/../../favicon.ico')))
 app.use(compression())
 
 if (!authCode) {
@@ -44,7 +44,7 @@ if (!authCode) {
 app.use(express.static(path.join(staticsPath)))
 
 app.get('/', (req, res) => {
-  res.status(200).sendFile(path.join(__dirname + '/../../index.html'))
+  res.status(200).sendFile(path.join(__dirname, '/../../index.html'))
 })
 
 app.post('/data/:filename', (req, res) => {
@@ -77,7 +77,7 @@ app.post('/data/:filename', (req, res) => {
       })
     }
 
-    fs.writeFile(filePath, body, function() {
+    fs.writeFile(filePath, body, function () {
       return res.status(200).send({
         success: 'Data sent successfully.'
       })

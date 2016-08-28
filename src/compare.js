@@ -37,9 +37,9 @@ const Compare = ({id, value}) => {
 
 Compare.propTypes = {
   value: PropTypes.oneOfType([
-          PropTypes.string,
-          PropTypes.number
-        ])
+    PropTypes.string,
+    PropTypes.number
+  ])
 }
 
 export default Compare

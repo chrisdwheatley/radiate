@@ -1,4 +1,3 @@
-import * as colors from 'material-ui/styles/colors'
 import React, {PropTypes} from 'react'
 
 const styles = {

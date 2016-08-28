@@ -2,7 +2,7 @@ import 'whatwg-fetch'
 
 export default function (file, api) {
   const resource = file ? `/${file}` : api
-  return fetch(resource)
+  return fetch(resource) // eslint-disable-line
     .then(response => {
       if (file) {
         const fileSplit = file.split('.')
