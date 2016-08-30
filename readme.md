@@ -8,7 +8,7 @@ A responsive dashboard written in React - built for all screen sizes.
 
   1. [Getting Started](#getting-started)
     1. [Server](#server)
-    1. [Authorization](#authorization)
+    1. [Authentication](#authentication)
     1. [Browser](#browser)
   1. [Customizing Radiate](#customizing-radiate)
     1. [Overview](#overview)
@@ -16,11 +16,12 @@ A responsive dashboard written in React - built for all screen sizes.
     1. [Layout](#layout)
     1. [Colors](#colors)
     1. [Assets](#assets)
-  1. [Getting Data Into Radiate](#getting-data-into-radiate)
-    1. [POSTing Data](#posting-data)
   1. [Deploying Radiate](#deploying-radiate)
     1. [Heroku](#heroku)
     1. [Other Deploy Targets](#other-deploy-targets)
+  1. [Getting Data Into Radiate](#getting-data-into-radiate)
+    1. [POSTing Data](#posting-data)
+    1. [POSTing To A Server With Authentication](#posting-to-a-server-with-authentication)
   1. [License](#license)
 
 ## Getting Started
@@ -59,9 +60,9 @@ npm start
 
 Navigate to [localhost:3000](http://localhost:3000) in your browser of choice.
 
-#### Authorization
+#### Authentication
 
-You'll notice a warning about setting an authorization code in the console output. If you're going to expose your instance of Radiate in any way then you will want to set an authorization code to ensure POST's to your server can be restricted. This can be set as an environment variable.
+You'll notice a warning about setting an authentication code in the console output. If you're going to expose your instance of Radiate in any way then you will want to set an authentication code to ensure POST's to your server can be restricted. This can be set as an environment variable.
 
 ```
 AUTH=your-auth-code-here npm start
@@ -177,6 +178,18 @@ When using the `<Text />` component you can define a file for Markdown to be ser
 
 When using the `<Value />` component, which is used for serving dynamic, updatable values, you can use assets to serve the data that is POSTed to Radiate. For example `<Value file='bar.json' prop='baz' />` will read the contents of the file in `dashboard/assets/bar.json` and display the value of the property `baz` in the JSON.
 
+## Deploying Radiate
+
+#### Heroku
+
+Radiate supports being deployed to Heroku, follow [Heroku's Getting Started Guide](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction) for details on how to serve Radiate via Heroku.
+
+Follow [Heroku's guide on environment variables](https://devcenter.heroku.com/articles/nodejs-support#environment-variables) for details on how to configure your authentication environment variable.
+
+#### Other Deploy Targets
+
+Radiate should be quick and easy to deploy to any targets which support Node.js.
+
 ## Getting Data Into Radiate
 
 There are two ways to get data into Radiate. One way is to pass in an API endpoint and a property to the `<Value />` component, for example;
@@ -206,15 +219,13 @@ curl -H "Content-Type: application/json" -X POST -d '{"temperature" : 80}' http:
 <Value file='weather.json' prop='temperature' suffix='°F' />
 ```
 
-## Deploying Radiate
+#### POSTing To A Server With Authentication
 
-#### Heroku
+If you've followed the steps in the [authentication](#authentication) you'll need to add a query param called `auth` to the end of the url you POST to, for example;
 
-Radiate supports being deployed to Heroku, follow [Heroku's Getting Started Guide](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction) for details on how to serve Radiate via Heroku.
-
-#### Other Deploy Targets
-
-Radiate should be quick and easy to deploy to any targets which support Node.js.
+```bash
+curl -H "Content-Type: application/json" -X POST -d '{"temperature" : 80}' http://localhost:3000/data/weather.json?auth=your-auth-code-here
+```
 
 ## License
 
