@@ -1,5 +1,4 @@
 import * as colors from 'material-ui/styles/colors'
-import Radium from 'radium'
 import React, {PropTypes} from 'react'
 
 const styles = {
@@ -59,4 +58,4 @@ Enable.propTypes = {
   os: PropTypes.string.isRequired
 }
 
-export default Radium(Enable)
+export default Enable

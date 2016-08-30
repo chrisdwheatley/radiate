@@ -1,5 +1,4 @@
 import * as colors from 'material-ui/styles/colors'
-import Radium from 'radium'
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {poll, resize} from './actions'
@@ -45,4 +44,4 @@ class Dashboard extends Component {
   }
 }
 
-export default connect(mapStateToProps)(Radium(Dashboard))
+export default connect(mapStateToProps)(Dashboard)

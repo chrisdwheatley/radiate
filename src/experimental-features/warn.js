@@ -66,6 +66,8 @@ const Warn = () => {
       <div style={[styles.cell, styles.green]}>
         <Title title='Links' />
         <div style={styles.copy}>
+          <a style={styles.link} href='https://github.com/chrisdwheatley/radiate#getting-started'>Gettin Started Guide</a>
+          <br />
           <a style={styles.link} href='https://github.com/chrisdwheatley/radiate'>GitHub Repository</a>
           <br />
           <a style={styles.link} href='https://github.com/chrisdwheatley/radiate/issues'>Raise an issues</a>
