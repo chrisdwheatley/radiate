@@ -23,7 +23,7 @@ module.exports = {
     }]
   },
   plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin(),
     new CopyWebpackPlugin([{
       from: 'dashboard/assets'
     }])
