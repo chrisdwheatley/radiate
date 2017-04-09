@@ -71,7 +71,7 @@
     "radium": "^0.18.1",
     "react": "^15.3.0",
     "react-dom": "^15.3.0",
-    "react-redux": "^4.4.1",
+    "react-redux": "^5.0.4",
     "redux": "^3.3.1",
     "serve-favicon": "^2.3.0",
     "style-loader": "^0.13.0",
