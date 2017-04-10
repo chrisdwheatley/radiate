@@ -66,7 +66,7 @@
     "glare": "^0.2.0",
     "lodash.uniqueid": "^4.0.1",
     "markdown": "^0.5.0",
-    "material-ui": "^0.15.2",
+    "material-ui": "^0.17.3",
     "moment": "^2.10.6",
     "radium": "^0.18.1",
     "react": "^15.3.0",
